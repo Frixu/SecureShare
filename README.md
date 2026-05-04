@@ -6,5 +6,5 @@
 - download plików
 
 ## Uruchomienie
--python server/main.py
--python client/main.py
+python server/main.py
+python client/main.py

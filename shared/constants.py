@@ -1,0 +1,43 @@
+# shared/constants.py
+
+# --- Typy wiadomości ---
+MSG_HELLO           = "HELLO"
+MSG_AUTH            = "AUTH"
+MSG_AUTH_OK         = "AUTH_OK"
+MSG_AUTH_FAIL       = "AUTH_FAIL"
+MSG_UPLOAD_START    = "UPLOAD_START"
+MSG_UPLOAD_CHUNK    = "UPLOAD_CHUNK"
+MSG_UPLOAD_END      = "UPLOAD_END"
+MSG_DOWNLOAD_REQ    = "DOWNLOAD_REQUEST"
+MSG_DOWNLOAD_CHUNK  = "DOWNLOAD_CHUNK"
+MSG_ACK             = "ACK"
+MSG_ERROR           = "ERROR"
+MSG_PING            = "PING"
+MSG_PONG            = "PONG"
+MSG_BYE             = "BYE"
+
+# --- Kody błędów ---
+ERR_INVALID_FORMAT    = 100
+ERR_AUTH_FAILED       = 101
+ERR_UNAUTHORIZED      = 102
+ERR_TIMEOUT           = 103
+ERR_DUPLICATE_MESSAGE = 104
+ERR_FILE_TOO_LARGE    = 105
+
+# --- Limity ---
+MAX_FILE_SIZE_BYTES   = 5 * 1024 * 1024   # 5 MB
+CHUNK_SIZE_BYTES      = 8 * 1024           # 8 KB
+MAX_MESSAGE_SIZE      = 64 * 1024          # 64 KB
+
+# --- Sieć ---
+DEFAULT_HOST          = "127.0.0.1"
+DEFAULT_PORT          = 9999
+TIMEOUT_SECONDS       = 5
+MAX_RETRIES           = 3
+
+# --- Stany połączenia ---
+STATE_DISCONNECTED    = "DISCONNECTED"
+STATE_CONNECTED       = "CONNECTED"
+STATE_AUTHENTICATED   = "AUTHENTICATED"
+STATE_TRANSFERRING    = "TRANSFERRING"
+STATE_CLOSED          = "CLOSED"

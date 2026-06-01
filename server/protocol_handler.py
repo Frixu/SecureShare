@@ -19,7 +19,7 @@ from server.file_manager import (
     get_file_checksum,
 )
 from server.connection_manager import ClientConnection
-from server.utils.crypto import verify_hmac
+from server.utils.crypto import verify_hmac, hmac_secret_to_b64
 from server.utils.logger import get_protocol_logger
 from shared.constants import (
     ERR_INVALID_FORMAT, ERR_AUTH_FAILED, ERR_UNAUTHORIZED,
@@ -191,7 +191,7 @@ class ProtocolHandler:
         )
         self._send(build_message(
             MSG_AUTH_OK, new_session_id,
-            {"session_id": new_session_id},
+            {"session_id": new_session_id, "hmac_secret": hmac_secret_to_b64(hmac_secret)},
             hmac_secret,
         ))
 

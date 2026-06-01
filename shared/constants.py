@@ -25,7 +25,7 @@ ERR_DUPLICATE_MESSAGE = 104
 ERR_FILE_TOO_LARGE    = 105
 
 # --- Limity ---
-MAX_FILE_SIZE_BYTES   = 5 * 1024 * 1024   # 5 MB
+MAX_FILE_SIZE_BYTES   = 50 * 1024 * 1024   # 50 MB
 CHUNK_SIZE_BYTES      = 8 * 1024           # 8 KB
 MAX_MESSAGE_SIZE      = 64 * 1024          # 64 KB
 

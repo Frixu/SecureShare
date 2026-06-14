@@ -143,6 +143,8 @@ class ProtocolHandler:
             MSG_DOWNLOAD_REQ: self._handle_download_request,
             MSG_PING:         self._handle_ping,
             MSG_BYE:          self._handle_bye,
+            MSG_ACK:          self._handle_ack,
+            MSG_ERROR:        self._handle_error,
         }.get(msg_type)
 
     # ------------------------------------------------------------------ #
@@ -314,6 +316,19 @@ class ProtocolHandler:
             invalidate_session(self.conn.session_id)
         self.conn.clear_session()
         self.conn.set_state(STATE_CLOSED)
+
+    def _handle_ack(self, msg_id: str, session_id: str, payload: dict) -> None:
+        ref_msg_id = payload.get("ref_msg_id", "")
+        logger.debug(
+            f"[{self.conn.conn_id}] Odebrano ACK dla msg_id={ref_msg_id[:8]}…"
+        )
+
+    def _handle_error(self, msg_id: str, session_id: str, payload: dict) -> None:
+        code = payload.get("code", 0)
+        desc = payload.get("description", "")
+        logger.warning(
+            f"[{self.conn.conn_id}] Klient zgłosił błąd {code}: {desc}"
+        )
 
     # ------------------------------------------------------------------ #
     #  Helpery                                                             #

@@ -18,6 +18,7 @@ from shared.constants import (
     MSG_HELLO, MSG_AUTH, MSG_AUTH_OK, MSG_AUTH_FAIL,
     MSG_UPLOAD_START, MSG_UPLOAD_CHUNK, MSG_UPLOAD_END,
     MSG_DOWNLOAD_REQ, MSG_DOWNLOAD_CHUNK,
+    MSG_LIST_REQUEST, MSG_LIST_RESPONSE,
     MSG_ACK, MSG_ERROR, MSG_PING, MSG_PONG, MSG_BYE,
 )
 from shared.message_schema import build_message, build_ack, verify_hmac
@@ -74,6 +75,15 @@ class SecureShareClient:
     def get_state(self) -> str:
         with self._lock:
             return self.state
+
+    def _restore_authenticated(self) -> None:
+        """
+        Po nieudanej operacji wraca do stanu AUTHENTICATED — ale tylko jeśli
+        połączenie wciąż żyje. Jeśli gniazdo padło (np. po wyczerpaniu retry),
+        zostawia stan rozłączony, żeby menu nie działało na martwym połączeniu.
+        """
+        if not self._stop_event.is_set() and self._sock is not None:
+            self.set_state(STATE_AUTHENTICATED)
 
     def connect(self) -> bool:
         """Establishes connection to server and does HELLO handshake."""
@@ -311,14 +321,21 @@ class SecureShareClient:
                     self._pending_requests[ref_msg_id].set()
                     return
         
-        # State-based matching (e.g. AUTH_OK / AUTH_FAIL have no ref_msg_id)
+        # State-based matching dla odpowiedzi bez ref_msg_id:
+        #  - AUTH_OK / AUTH_FAIL (odpowiedź na AUTH),
+        #  - ERROR (np. "plik nie istnieje" na DOWNLOAD_REQUEST) — dopasowujemy
+        #    do ostatniego oczekującego żądania, żeby błąd serwera nie powodował
+        #    3 timeoutów i zerwania połączenia.
         with self._lock:
-            if msg_type in (MSG_AUTH_OK, MSG_AUTH_FAIL) and self._last_sent_msg_type == MSG_AUTH:
-                last_id = self._last_sent_msg_id
-                if last_id and last_id in self._pending_requests:
-                    self._received_responses[last_id] = msg
-                    self._pending_requests[last_id].set()
-                    return
+            last_id = self._last_sent_msg_id
+            is_auth_resp = (
+                msg_type in (MSG_AUTH_OK, MSG_AUTH_FAIL)
+                and self._last_sent_msg_type == MSG_AUTH
+            )
+            if (is_auth_resp or msg_type == MSG_ERROR) and last_id in self._pending_requests:
+                self._received_responses[last_id] = msg
+                self._pending_requests[last_id].set()
+                return
 
         logger.warning(f"Otrzymano nieoczekiwaną wiadomość typu {msg_type} (brak oczekującego żądania).")
 
@@ -419,7 +436,7 @@ class SecureShareClient:
         
         if resp is None or resp.get("type") != MSG_ACK:
             logger.error("Inicjalizacja wysyłania odrzucona przez serwer.")
-            self.set_state(STATE_AUTHENTICATED)
+            self._restore_authenticated()
             return False
 
         # 2. UPLOAD_CHUNKs
@@ -443,7 +460,7 @@ class SecureShareClient:
 
         if resp is None or resp.get("type") != MSG_ACK:
             logger.error("Błąd podczas finalizacji wysyłania pliku.")
-            self.set_state(STATE_AUTHENTICATED)
+            self._restore_authenticated()
             return False
 
         # Check server ACK payload to verify checksum response if sent
@@ -451,12 +468,23 @@ class SecureShareClient:
         server_checksum = ack_payload.get("checksum")
         if server_checksum and server_checksum != checksum:
             logger.error("Suma kontrolna pliku na serwerze różni się od lokalnej!")
-            self.set_state(STATE_AUTHENTICATED)
+            self._restore_authenticated()
             return False
 
         logger.info(f"Wysyłanie pliku '{filename}' zakończone pomyślnie!")
         self.set_state(STATE_AUTHENTICATED)
         return True
+
+    def list_server_files(self) -> Optional[list]:
+        """Pobiera listę plików dostępnych na serwerze. None przy błędzie."""
+        if self.get_state() != STATE_AUTHENTICATED:
+            logger.error("Musisz być zalogowany, aby wyświetlić listę plików.")
+            return None
+
+        resp = self._send_with_retry(MSG_LIST_REQUEST, {})
+        if resp is None or resp.get("type") != MSG_LIST_RESPONSE:
+            return None
+        return resp.get("payload", {}).get("files", [])
 
     def download_file(self, filename: str, dest_path_str: str) -> bool:
         """UC3: Downloads a file from the server."""
@@ -491,12 +519,12 @@ class SecureShareClient:
         if resp is None:
             # Failed to start download
             self._active_download = None
-            self.set_state(STATE_AUTHENTICATED)
+            self._restore_authenticated()
             return False
             
         if resp.get("type") == MSG_ERROR:
             self._active_download = None
-            self.set_state(STATE_AUTHENTICATED)
+            self._restore_authenticated()
             return False
 
         # Now wait for the reader thread to signal that download is complete
@@ -523,7 +551,7 @@ class SecureShareClient:
         else:
             logger.error("Przekroczono limit czasu oczekiwania na pobranie pliku.")
             self._active_download = None
-            self.set_state(STATE_AUTHENTICATED)
+            self._restore_authenticated()
             return False
 
     def _handle_download_chunk(self, msg: dict) -> None:

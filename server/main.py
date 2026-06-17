@@ -15,7 +15,7 @@ from server.protocol_handler import ProtocolHandler
 from server.utils.logger import get_server_logger
 from shared.constants import (
     DEFAULT_HOST, DEFAULT_PORT,
-    TIMEOUT_SECONDS, MAX_MESSAGE_SIZE,
+    TIMEOUT_SECONDS, MAX_MESSAGE_SIZE, MAX_FILE_SIZE_BYTES,
     STATE_CLOSED,
 )
 
@@ -33,30 +33,46 @@ WATCHDOG_INTERVAL = 10   # sekundy między sprawdzeniami timeoutów
 #  Warstwa sieciowa — jeden klient                                    #
 # ------------------------------------------------------------------ #
 
-def _recv_message(sock: ssl.SSLSocket) -> str | None:
+class _LineReader:
     """
-    Odbiera jedną wiadomość JSON zakończoną znakiem nowej linii.
-    Zwraca None przy zerwaniu połączenia lub przekroczeniu limitu rozmiaru.
+    Odbiera wiadomości JSON oddzielone znakiem nowej linii.
+
+    Utrzymuje trwały bufor między wywołaniami, więc jeśli kilka wiadomości
+    przyjdzie w jednym segmencie TCP (np. seria ACK albo PING keep-alive
+    w trakcie innej operacji), żadna nie zostanie zgubiona.
     """
-    buf = b""
-    while True:
-        try:
-            chunk = sock.recv(4096)
-        except (OSError, ssl.SSLError) as e:
-            logger.debug(f"Błąd odbioru danych: {e}")
-            return None
 
-        if not chunk:
-            return None
+    def __init__(self, sock: ssl.SSLSocket):
+        self._sock = sock
+        self._buf = b""
 
-        buf += chunk
-        if len(buf) > MAX_MESSAGE_SIZE:
-            logger.warning("Wiadomość przekracza MAX_MESSAGE_SIZE — odrzucam")
-            return None
+    def read_message(self) -> str | None:
+        """
+        Zwraca kolejną kompletną wiadomość lub None przy zerwaniu połączenia
+        bądź przekroczeniu limitu rozmiaru pojedynczej wiadomości.
+        """
+        while True:
+            # Najpierw oddaj wiadomości już zbuforowane.
+            if b"\n" in self._buf:
+                line, self._buf = self._buf.split(b"\n", 1)
+                return line.decode("utf-8", errors="replace")
 
-        if b"\n" in buf:
-            line, _ = buf.split(b"\n", 1)
-            return line.decode("utf-8", errors="replace")
+            # Brak końca linii, a bufor już za duży → pojedyncza wiadomość
+            # przekracza limit.
+            if len(self._buf) > MAX_MESSAGE_SIZE:
+                logger.warning("Wiadomość przekracza MAX_MESSAGE_SIZE — odrzucam")
+                return None
+
+            try:
+                chunk = self._sock.recv(4096)
+            except (OSError, ssl.SSLError) as e:
+                logger.debug(f"Błąd odbioru danych: {e}")
+                return None
+
+            if not chunk:
+                return None
+
+            self._buf += chunk
 
 
 def _send_message(sock: ssl.SSLSocket, msg: dict) -> bool:
@@ -89,6 +105,7 @@ def _handle_client(
         _send_message(sock, msg)
 
     handler = ProtocolHandler(conn, send_fn)
+    reader  = _LineReader(sock)
 
     try:
         while True:
@@ -100,7 +117,7 @@ def _handle_client(
                 break
 
             # Odbierz wiadomość
-            raw = _recv_message(sock)
+            raw = reader.read_message()
             if raw is None:
                 logger.info(f"[{conn_id}] Klient rozłączył się")
                 break
@@ -217,7 +234,8 @@ def run_server(host: str = DEFAULT_HOST, port: int = DEFAULT_PORT) -> None:
             )
             logger.info(
                 f"Aktywni użytkownicy: {manager.count()} | "
-                f"MAX_FILE={50}MB | TIMEOUT={TIMEOUT_SECONDS}s"
+                f"MAX_FILE={MAX_FILE_SIZE_BYTES // (1024 * 1024)}MB | "
+                f"TIMEOUT={TIMEOUT_SECONDS}s"
             )
 
             try:

@@ -17,6 +17,7 @@ from server.file_manager import (
     abort_upload,
     download_prepare,
     get_file_checksum,
+    list_files,
 )
 from server.connection_manager import ClientConnection
 from server.utils.crypto import verify_hmac, hmac_secret_to_b64
@@ -27,6 +28,7 @@ from shared.constants import (
     MSG_HELLO, MSG_AUTH, MSG_AUTH_OK, MSG_AUTH_FAIL,
     MSG_UPLOAD_START, MSG_UPLOAD_CHUNK, MSG_UPLOAD_END,
     MSG_DOWNLOAD_REQ, MSG_DOWNLOAD_CHUNK,
+    MSG_LIST_REQUEST, MSG_LIST_RESPONSE,
     MSG_ACK, MSG_ERROR, MSG_PING, MSG_PONG, MSG_BYE,
     STATE_DISCONNECTED, STATE_CONNECTED, STATE_AUTHENTICATED,
     STATE_TRANSFERRING, STATE_CLOSED,
@@ -141,6 +143,7 @@ class ProtocolHandler:
             MSG_UPLOAD_CHUNK: self._handle_upload_chunk,
             MSG_UPLOAD_END:   self._handle_upload_end,
             MSG_DOWNLOAD_REQ: self._handle_download_request,
+            MSG_LIST_REQUEST: self._handle_list_request,
             MSG_PING:         self._handle_ping,
             MSG_BYE:          self._handle_bye,
             MSG_ACK:          self._handle_ack,
@@ -299,6 +302,22 @@ class ProtocolHandler:
         logger.info(
             f"[{self.conn.conn_id}] Download zakończony | file='{filename}'"
         )
+
+    def _handle_list_request(self, msg_id: str, session_id: str, payload: dict) -> None:
+        if not self._require_state(STATE_AUTHENTICATED, msg_id):
+            return
+
+        files = list_files()
+        logger.info(
+            f"[{self.conn.conn_id}] LIST | user='{self.conn.username}' "
+            f"| plików={len(files)}"
+        )
+        self._send(build_message(
+            MSG_LIST_RESPONSE, self.conn.session_id,
+            {"ref_msg_id": msg_id, "files": files},
+            self.conn.hmac_secret,
+        ))
+        self.conn.record_sent()
 
     def _handle_ping(self, msg_id: str, session_id: str, payload: dict) -> None:
         self._send(build_message(

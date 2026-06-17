@@ -91,3 +91,1073 @@
 2026-06-01 12:07:21 | DEBUG    | server.main              | [003edc4b-e15] Stan: AUTHENTICATED → CLOSED
 2026-06-01 12:07:21 | INFO     | server.main              | [003edc4b-e15] Stan CLOSED — zamykam połączenie
 2026-06-01 12:07:21 | INFO     | server.main              | Rozłączono | id=003edc4b-e15 | user=None | uptime=0.0s
+2026-06-15 10:44:02 | WARNING  | server.auth              | Plik users.json nie istnieje, tworzę pusty.
+2026-06-15 10:44:02 | INFO     | server.auth              | Zarejestrowano użytkownika: 'alice'
+2026-06-15 10:44:02 | INFO     | server.auth              | Zalogowano użytkownika 'alice' | session=4_L17o70yiGh…
+2026-06-15 10:44:02 | WARNING  | server.auth              | Plik users.json nie istnieje, tworzę pusty.
+2026-06-15 10:44:02 | WARNING  | server.auth              | Nieznany użytkownik: 'nieistnieje'
+2026-06-15 10:44:02 | WARNING  | server.auth              | Plik users.json nie istnieje, tworzę pusty.
+2026-06-15 10:44:02 | INFO     | server.auth              | Zarejestrowano użytkownika: 'bob'
+2026-06-15 10:44:02 | WARNING  | server.auth              | Błędne hasło dla użytkownika: 'bob'
+2026-06-15 10:44:02 | WARNING  | server.auth              | Plik users.json nie istnieje, tworzę pusty.
+2026-06-15 10:44:02 | INFO     | server.auth              | Zarejestrowano użytkownika: 'carol'
+2026-06-15 10:44:02 | INFO     | server.auth              | Zalogowano użytkownika 'carol' | session=gy8iGf6vD7Ac…
+2026-06-15 10:44:02 | INFO     | server.auth              | Sesja zakończona | user='carol' | session=gy8iGf6vD7Ac…
+2026-06-15 10:44:02 | WARNING  | server.auth              | Plik users.json nie istnieje, tworzę pusty.
+2026-06-15 10:44:02 | INFO     | server.auth              | Zarejestrowano użytkownika: 'alice'
+2026-06-15 10:44:02 | WARNING  | server.auth              | Próba rejestracji istniejącego użytkownika: 'alice'
+2026-06-15 10:44:02 | WARNING  | server.auth              | Plik users.json nie istnieje, tworzę pusty.
+2026-06-15 10:44:02 | INFO     | server.auth              | Zarejestrowano użytkownika: 'alice'
+2026-06-15 10:44:02 | WARNING  | server.auth              | Plik users.json nie istnieje, tworzę pusty.
+2026-06-15 10:44:02 | INFO     | server.auth              | Zarejestrowano użytkownika: 'dave'
+2026-06-15 10:44:02 | INFO     | server.auth              | Zalogowano użytkownika 'dave' | session=NhQOOKBwLsDG…
+2026-06-15 10:44:02 | INFO     | server.auth              | Zalogowano użytkownika 'dave' | session=PU_sEbggUioj…
+2026-06-15 10:44:02 | WARNING  | server.auth              | Plik users.json nie istnieje, tworzę pusty.
+2026-06-15 10:44:02 | INFO     | server.auth              | Zarejestrowano użytkownika: 'alice'
+2026-06-15 10:44:02 | DEBUG    | server.protocol          | [test-conn] ← HELLO | msg_id=9c8c1bbd…
+2026-06-15 10:44:02 | INFO     | server.protocol          | [test-conn] HELLO | client_version=1.0
+2026-06-15 10:44:02 | DEBUG    | server.main              | [test-conn] Stan: DISCONNECTED → CONNECTED
+2026-06-15 10:44:02 | DEBUG    | server.protocol          | [test-conn] ← AUTH | msg_id=63041fce…
+2026-06-15 10:44:02 | INFO     | server.auth              | Zalogowano użytkownika 'alice' | session=QRyYkuvvqCD4…
+2026-06-15 10:44:02 | DEBUG    | server.main              | [test-conn] Stan: CONNECTED → AUTHENTICATED
+2026-06-15 10:44:02 | INFO     | server.protocol          | [test-conn] AUTH OK | user='alice' | session=QRyYkuvvqCD4…
+2026-06-15 10:44:02 | DEBUG    | server.protocol          | [test-conn] ← PING | msg_id=staly-ms…
+2026-06-15 10:44:02 | DEBUG    | server.protocol          | [test-conn] ← PING | msg_id=staly-ms…
+2026-06-15 10:44:02 | WARNING  | server.protocol          | [test-conn] Duplikat wiadomości | msg_id=staly-ms…
+2026-06-15 10:44:02 | WARNING  | server.protocol          | [test-conn] ERROR 104 → Duplikat wiadomości
+2026-06-15 10:44:02 | WARNING  | server.auth              | Plik users.json nie istnieje, tworzę pusty.
+2026-06-15 10:44:02 | INFO     | server.auth              | Zarejestrowano użytkownika: 'alice'
+2026-06-15 10:44:02 | DEBUG    | server.protocol          | [test-conn] ← HELLO | msg_id=9c463e82…
+2026-06-15 10:44:02 | INFO     | server.protocol          | [test-conn] HELLO | client_version=1.0
+2026-06-15 10:44:02 | DEBUG    | server.main              | [test-conn] Stan: DISCONNECTED → CONNECTED
+2026-06-15 10:44:02 | DEBUG    | server.protocol          | [test-conn] ← AUTH | msg_id=191d71a9…
+2026-06-15 10:44:02 | INFO     | server.auth              | Zalogowano użytkownika 'alice' | session=HZ1Q9UpwxunP…
+2026-06-15 10:44:02 | DEBUG    | server.main              | [test-conn] Stan: CONNECTED → AUTHENTICATED
+2026-06-15 10:44:02 | INFO     | server.protocol          | [test-conn] AUTH OK | user='alice' | session=HZ1Q9UpwxunP…
+2026-06-15 10:44:02 | DEBUG    | server.protocol          | [test-conn] ← PING | msg_id=bab3c78e…
+2026-06-15 10:44:02 | WARNING  | server.protocol          | [test-conn] Nieprawidłowy HMAC | type=PING
+2026-06-15 10:44:02 | WARNING  | server.protocol          | [test-conn] ERROR 100 → Nieprawidłowy HMAC
+2026-06-15 10:44:02 | WARNING  | server.auth              | Plik users.json nie istnieje, tworzę pusty.
+2026-06-15 10:44:02 | INFO     | server.auth              | Zarejestrowano użytkownika: 'alice'
+2026-06-15 10:44:02 | WARNING  | server.protocol          | [test-conn] Błąd parsowania JSON
+2026-06-15 10:44:02 | WARNING  | server.protocol          | [test-conn] ERROR 100 → Nieprawidłowy format JSON
+2026-06-15 10:44:02 | WARNING  | server.auth              | Plik users.json nie istnieje, tworzę pusty.
+2026-06-15 10:44:02 | INFO     | server.auth              | Zarejestrowano użytkownika: 'alice'
+2026-06-15 10:44:02 | WARNING  | server.protocol          | [test-conn] ERROR 100 → Brakujące pole wiadomości: 'msg_id'
+2026-06-15 10:44:02 | WARNING  | server.auth              | Plik users.json nie istnieje, tworzę pusty.
+2026-06-15 10:44:02 | INFO     | server.auth              | Zarejestrowano użytkownika: 'alice'
+2026-06-15 10:44:02 | DEBUG    | server.protocol          | [test-conn] ← HELLO | msg_id=617292f0…
+2026-06-15 10:44:02 | INFO     | server.protocol          | [test-conn] HELLO | client_version=1.0
+2026-06-15 10:44:02 | DEBUG    | server.main              | [test-conn] Stan: DISCONNECTED → CONNECTED
+2026-06-15 10:44:02 | DEBUG    | server.protocol          | [test-conn] ← UPLOAD_START | msg_id=f4168af9…
+2026-06-15 10:44:02 | WARNING  | server.protocol          | [test-conn] ERROR 102 → Niedozwolona operacja w stanie CONNECTED (wymagany: AUTHENTICATED)
+2026-06-15 10:44:02 | WARNING  | server.auth              | Plik users.json nie istnieje, tworzę pusty.
+2026-06-15 10:44:02 | INFO     | server.auth              | Zarejestrowano użytkownika: 'alice'
+2026-06-15 10:44:02 | DEBUG    | server.protocol          | [test-conn] ← HELLO | msg_id=6b704331…
+2026-06-15 10:44:02 | INFO     | server.protocol          | [test-conn] HELLO | client_version=1.0
+2026-06-15 10:44:02 | DEBUG    | server.main              | [test-conn] Stan: DISCONNECTED → CONNECTED
+2026-06-15 10:44:02 | DEBUG    | server.protocol          | [test-conn] ← AUTH | msg_id=0ae55bac…
+2026-06-15 10:44:02 | WARNING  | server.auth              | Błędne hasło dla użytkownika: 'alice'
+2026-06-15 10:44:02 | WARNING  | server.protocol          | [test-conn] AUTH nieudany | user='alice'
+2026-06-15 10:44:02 | DEBUG    | server.main              | [test-conn] Stan: CONNECTED → CLOSED
+2026-06-15 10:44:02 | WARNING  | server.auth              | Plik users.json nie istnieje, tworzę pusty.
+2026-06-15 10:44:02 | INFO     | server.auth              | Zarejestrowano użytkownika: 'alice'
+2026-06-15 10:44:02 | DEBUG    | server.protocol          | [test-conn] ← HELLO | msg_id=fdd3bb12…
+2026-06-15 10:44:02 | INFO     | server.protocol          | [test-conn] HELLO | client_version=1.0
+2026-06-15 10:44:02 | DEBUG    | server.main              | [test-conn] Stan: DISCONNECTED → CONNECTED
+2026-06-15 10:44:02 | DEBUG    | server.protocol          | [test-conn] ← AUTH | msg_id=3de29e7d…
+2026-06-15 10:44:02 | INFO     | server.auth              | Zalogowano użytkownika 'alice' | session=Vbj79ZGVU91D…
+2026-06-15 10:44:02 | DEBUG    | server.main              | [test-conn] Stan: CONNECTED → AUTHENTICATED
+2026-06-15 10:44:02 | INFO     | server.protocol          | [test-conn] AUTH OK | user='alice' | session=Vbj79ZGVU91D…
+2026-06-15 10:44:02 | DEBUG    | server.protocol          | [test-conn] ← UPLOAD_START | msg_id=c9fd030d…
+2026-06-15 10:44:02 | INFO     | server.transfer          | Upload start | file='plik.pdf' | size=34B | user='alice'
+2026-06-15 10:44:02 | DEBUG    | server.main              | [test-conn] Stan: AUTHENTICATED → TRANSFERRING
+2026-06-15 10:44:02 | DEBUG    | server.protocol          | [test-conn] ← UPLOAD_CHUNK | msg_id=b011682b…
+2026-06-15 10:44:02 | DEBUG    | server.transfer          | Upload chunk | file='plik.pdf' | chunk=0 | size=34B
+2026-06-15 10:44:02 | DEBUG    | server.protocol          | [test-conn] ← UPLOAD_END | msg_id=4fa094e1…
+2026-06-15 10:44:02 | INFO     | server.transfer          | Upload zakończony | file='plik.pdf' | size=34B | user='alice'
+2026-06-15 10:44:02 | DEBUG    | server.main              | [test-conn] Stan: TRANSFERRING → AUTHENTICATED
+2026-06-15 10:44:02 | DEBUG    | server.protocol          | [test-conn] ← DOWNLOAD_REQUEST | msg_id=d47741ad…
+2026-06-15 10:44:02 | DEBUG    | server.main              | [test-conn] Stan: AUTHENTICATED → TRANSFERRING
+2026-06-15 10:44:02 | INFO     | server.transfer          | Download przygotowany | file='plik.pdf' | chunks=1 | size=34B
+2026-06-15 10:44:02 | INFO     | server.protocol          | [test-conn] Download start | file='plik.pdf' | chunks=1
+2026-06-15 10:44:02 | DEBUG    | server.main              | [test-conn] Stan: TRANSFERRING → AUTHENTICATED
+2026-06-15 10:44:02 | INFO     | server.protocol          | [test-conn] Download zakończony | file='plik.pdf'
+2026-06-15 10:44:02 | INFO     | server.transfer          | Upload start | file='plik.txt' | size=8B | user='alice'
+2026-06-15 10:44:02 | DEBUG    | server.transfer          | Upload chunk | file='plik.txt' | chunk=0 | size=8B
+2026-06-15 10:44:02 | INFO     | server.transfer          | Upload start | file='raport.pdf' | size=8242B | user='alice'
+2026-06-15 10:44:02 | DEBUG    | server.transfer          | Upload chunk | file='raport.pdf' | chunk=0 | size=8192B
+2026-06-15 10:44:02 | DEBUG    | server.transfer          | Upload chunk | file='raport.pdf' | chunk=1 | size=50B
+2026-06-15 10:44:02 | INFO     | server.transfer          | Upload zakończony | file='raport.pdf' | size=8242B | user='alice'
+2026-06-15 10:44:02 | INFO     | server.transfer          | Download przygotowany | file='raport.pdf' | chunks=2 | size=8242B
+2026-06-15 10:44:16 | WARNING  | server.auth              | Plik users.json nie istnieje, tworzę pusty.
+2026-06-15 10:44:16 | INFO     | server.auth              | Zarejestrowano użytkownika: 'alice'
+2026-06-15 10:44:16 | INFO     | server.auth              | Zalogowano użytkownika 'alice' | session=36_9BMeuTYNa…
+2026-06-15 10:44:16 | WARNING  | server.auth              | Plik users.json nie istnieje, tworzę pusty.
+2026-06-15 10:44:16 | WARNING  | server.auth              | Nieznany użytkownik: 'nieistnieje'
+2026-06-15 10:44:16 | WARNING  | server.auth              | Plik users.json nie istnieje, tworzę pusty.
+2026-06-15 10:44:16 | INFO     | server.auth              | Zarejestrowano użytkownika: 'bob'
+2026-06-15 10:44:16 | WARNING  | server.auth              | Błędne hasło dla użytkownika: 'bob'
+2026-06-15 10:44:16 | WARNING  | server.auth              | Plik users.json nie istnieje, tworzę pusty.
+2026-06-15 10:44:16 | INFO     | server.auth              | Zarejestrowano użytkownika: 'carol'
+2026-06-15 10:44:16 | INFO     | server.auth              | Zalogowano użytkownika 'carol' | session=bK7awgBv-FpL…
+2026-06-15 10:44:16 | INFO     | server.auth              | Sesja zakończona | user='carol' | session=bK7awgBv-FpL…
+2026-06-15 10:44:16 | WARNING  | server.auth              | Plik users.json nie istnieje, tworzę pusty.
+2026-06-15 10:44:16 | INFO     | server.auth              | Zarejestrowano użytkownika: 'alice'
+2026-06-15 10:44:16 | WARNING  | server.auth              | Próba rejestracji istniejącego użytkownika: 'alice'
+2026-06-15 10:44:16 | WARNING  | server.auth              | Plik users.json nie istnieje, tworzę pusty.
+2026-06-15 10:44:16 | INFO     | server.auth              | Zarejestrowano użytkownika: 'alice'
+2026-06-15 10:44:16 | WARNING  | server.auth              | Plik users.json nie istnieje, tworzę pusty.
+2026-06-15 10:44:16 | INFO     | server.auth              | Zarejestrowano użytkownika: 'dave'
+2026-06-15 10:44:16 | INFO     | server.auth              | Zalogowano użytkownika 'dave' | session=lLxDvmQqF3Tv…
+2026-06-15 10:44:16 | INFO     | server.auth              | Zalogowano użytkownika 'dave' | session=4ODFK7tuPi6M…
+2026-06-15 10:44:16 | WARNING  | server.auth              | Plik users.json nie istnieje, tworzę pusty.
+2026-06-15 10:44:16 | INFO     | server.auth              | Zarejestrowano użytkownika: 'alice'
+2026-06-15 10:44:16 | DEBUG    | server.protocol          | [test-conn] ← HELLO | msg_id=3af8c3f6…
+2026-06-15 10:44:16 | INFO     | server.protocol          | [test-conn] HELLO | client_version=1.0
+2026-06-15 10:44:16 | DEBUG    | server.main              | [test-conn] Stan: DISCONNECTED → CONNECTED
+2026-06-15 10:44:16 | DEBUG    | server.protocol          | [test-conn] ← AUTH | msg_id=6d67914f…
+2026-06-15 10:44:16 | INFO     | server.auth              | Zalogowano użytkownika 'alice' | session=QKUiH0gmtQV6…
+2026-06-15 10:44:16 | DEBUG    | server.main              | [test-conn] Stan: CONNECTED → AUTHENTICATED
+2026-06-15 10:44:16 | INFO     | server.protocol          | [test-conn] AUTH OK | user='alice' | session=QKUiH0gmtQV6…
+2026-06-15 10:44:16 | DEBUG    | server.protocol          | [test-conn] ← PING | msg_id=staly-ms…
+2026-06-15 10:44:16 | DEBUG    | server.protocol          | [test-conn] ← PING | msg_id=staly-ms…
+2026-06-15 10:44:16 | WARNING  | server.protocol          | [test-conn] Duplikat wiadomości | msg_id=staly-ms…
+2026-06-15 10:44:16 | WARNING  | server.protocol          | [test-conn] ERROR 104 → Duplikat wiadomości
+2026-06-15 10:44:16 | WARNING  | server.auth              | Plik users.json nie istnieje, tworzę pusty.
+2026-06-15 10:44:16 | INFO     | server.auth              | Zarejestrowano użytkownika: 'alice'
+2026-06-15 10:44:16 | DEBUG    | server.protocol          | [test-conn] ← HELLO | msg_id=ef6a2987…
+2026-06-15 10:44:16 | INFO     | server.protocol          | [test-conn] HELLO | client_version=1.0
+2026-06-15 10:44:16 | DEBUG    | server.main              | [test-conn] Stan: DISCONNECTED → CONNECTED
+2026-06-15 10:44:16 | DEBUG    | server.protocol          | [test-conn] ← AUTH | msg_id=deced591…
+2026-06-15 10:44:16 | INFO     | server.auth              | Zalogowano użytkownika 'alice' | session=SEsmc91rl2Tm…
+2026-06-15 10:44:16 | DEBUG    | server.main              | [test-conn] Stan: CONNECTED → AUTHENTICATED
+2026-06-15 10:44:16 | INFO     | server.protocol          | [test-conn] AUTH OK | user='alice' | session=SEsmc91rl2Tm…
+2026-06-15 10:44:16 | DEBUG    | server.protocol          | [test-conn] ← PING | msg_id=c1a3f156…
+2026-06-15 10:44:16 | WARNING  | server.protocol          | [test-conn] Nieprawidłowy HMAC | type=PING
+2026-06-15 10:44:16 | WARNING  | server.protocol          | [test-conn] ERROR 100 → Nieprawidłowy HMAC
+2026-06-15 10:44:16 | WARNING  | server.auth              | Plik users.json nie istnieje, tworzę pusty.
+2026-06-15 10:44:16 | INFO     | server.auth              | Zarejestrowano użytkownika: 'alice'
+2026-06-15 10:44:16 | WARNING  | server.protocol          | [test-conn] Błąd parsowania JSON
+2026-06-15 10:44:16 | WARNING  | server.protocol          | [test-conn] ERROR 100 → Nieprawidłowy format JSON
+2026-06-15 10:44:16 | WARNING  | server.auth              | Plik users.json nie istnieje, tworzę pusty.
+2026-06-15 10:44:16 | INFO     | server.auth              | Zarejestrowano użytkownika: 'alice'
+2026-06-15 10:44:16 | WARNING  | server.protocol          | [test-conn] ERROR 100 → Brakujące pole wiadomości: 'msg_id'
+2026-06-15 10:44:16 | WARNING  | server.auth              | Plik users.json nie istnieje, tworzę pusty.
+2026-06-15 10:44:16 | INFO     | server.auth              | Zarejestrowano użytkownika: 'alice'
+2026-06-15 10:44:16 | DEBUG    | server.protocol          | [test-conn] ← HELLO | msg_id=92667306…
+2026-06-15 10:44:16 | INFO     | server.protocol          | [test-conn] HELLO | client_version=1.0
+2026-06-15 10:44:16 | DEBUG    | server.main              | [test-conn] Stan: DISCONNECTED → CONNECTED
+2026-06-15 10:44:16 | DEBUG    | server.protocol          | [test-conn] ← UPLOAD_START | msg_id=6dcb99a9…
+2026-06-15 10:44:16 | WARNING  | server.protocol          | [test-conn] ERROR 102 → Niedozwolona operacja w stanie CONNECTED (wymagany: AUTHENTICATED)
+2026-06-15 10:44:16 | WARNING  | server.auth              | Plik users.json nie istnieje, tworzę pusty.
+2026-06-15 10:44:16 | INFO     | server.auth              | Zarejestrowano użytkownika: 'alice'
+2026-06-15 10:44:16 | DEBUG    | server.protocol          | [test-conn] ← HELLO | msg_id=c341b2f8…
+2026-06-15 10:44:16 | INFO     | server.protocol          | [test-conn] HELLO | client_version=1.0
+2026-06-15 10:44:16 | DEBUG    | server.main              | [test-conn] Stan: DISCONNECTED → CONNECTED
+2026-06-15 10:44:16 | DEBUG    | server.protocol          | [test-conn] ← AUTH | msg_id=7d458eae…
+2026-06-15 10:44:16 | WARNING  | server.auth              | Błędne hasło dla użytkownika: 'alice'
+2026-06-15 10:44:16 | WARNING  | server.protocol          | [test-conn] AUTH nieudany | user='alice'
+2026-06-15 10:44:16 | DEBUG    | server.main              | [test-conn] Stan: CONNECTED → CLOSED
+2026-06-15 10:44:16 | WARNING  | server.auth              | Plik users.json nie istnieje, tworzę pusty.
+2026-06-15 10:44:16 | INFO     | server.auth              | Zarejestrowano użytkownika: 'alice'
+2026-06-15 10:44:16 | DEBUG    | server.protocol          | [test-conn] ← HELLO | msg_id=5f0362ef…
+2026-06-15 10:44:16 | INFO     | server.protocol          | [test-conn] HELLO | client_version=1.0
+2026-06-15 10:44:16 | DEBUG    | server.main              | [test-conn] Stan: DISCONNECTED → CONNECTED
+2026-06-15 10:44:16 | DEBUG    | server.protocol          | [test-conn] ← AUTH | msg_id=1469c240…
+2026-06-15 10:44:16 | INFO     | server.auth              | Zalogowano użytkownika 'alice' | session=qugmDmYErR5a…
+2026-06-15 10:44:16 | DEBUG    | server.main              | [test-conn] Stan: CONNECTED → AUTHENTICATED
+2026-06-15 10:44:16 | INFO     | server.protocol          | [test-conn] AUTH OK | user='alice' | session=qugmDmYErR5a…
+2026-06-15 10:44:16 | DEBUG    | server.protocol          | [test-conn] ← UPLOAD_START | msg_id=120dfbe9…
+2026-06-15 10:44:16 | INFO     | server.transfer          | Upload start | file='plik.pdf' | size=34B | user='alice'
+2026-06-15 10:44:16 | DEBUG    | server.main              | [test-conn] Stan: AUTHENTICATED → TRANSFERRING
+2026-06-15 10:44:16 | DEBUG    | server.protocol          | [test-conn] ← UPLOAD_CHUNK | msg_id=119f6efd…
+2026-06-15 10:44:16 | DEBUG    | server.transfer          | Upload chunk | file='plik.pdf' | chunk=0 | size=34B
+2026-06-15 10:44:16 | DEBUG    | server.protocol          | [test-conn] ← UPLOAD_END | msg_id=8d780200…
+2026-06-15 10:44:16 | INFO     | server.transfer          | Upload zakończony | file='plik.pdf' | size=34B | user='alice'
+2026-06-15 10:44:16 | DEBUG    | server.main              | [test-conn] Stan: TRANSFERRING → AUTHENTICATED
+2026-06-15 10:44:16 | DEBUG    | server.protocol          | [test-conn] ← DOWNLOAD_REQUEST | msg_id=7aaf2394…
+2026-06-15 10:44:16 | DEBUG    | server.main              | [test-conn] Stan: AUTHENTICATED → TRANSFERRING
+2026-06-15 10:44:16 | INFO     | server.transfer          | Download przygotowany | file='plik.pdf' | chunks=1 | size=34B
+2026-06-15 10:44:16 | INFO     | server.protocol          | [test-conn] Download start | file='plik.pdf' | chunks=1
+2026-06-15 10:44:16 | DEBUG    | server.main              | [test-conn] Stan: TRANSFERRING → AUTHENTICATED
+2026-06-15 10:44:16 | INFO     | server.protocol          | [test-conn] Download zakończony | file='plik.pdf'
+2026-06-15 10:44:16 | INFO     | server.transfer          | Upload start | file='plik.txt' | size=8B | user='alice'
+2026-06-15 10:44:16 | DEBUG    | server.transfer          | Upload chunk | file='plik.txt' | chunk=0 | size=8B
+2026-06-15 10:44:16 | INFO     | server.transfer          | Upload start | file='raport.pdf' | size=8242B | user='alice'
+2026-06-15 10:44:16 | DEBUG    | server.transfer          | Upload chunk | file='raport.pdf' | chunk=0 | size=8192B
+2026-06-15 10:44:16 | DEBUG    | server.transfer          | Upload chunk | file='raport.pdf' | chunk=1 | size=50B
+2026-06-15 10:44:16 | INFO     | server.transfer          | Upload zakończony | file='raport.pdf' | size=8242B | user='alice'
+2026-06-15 10:44:16 | INFO     | server.transfer          | Download przygotowany | file='raport.pdf' | chunks=2 | size=8242B
+2026-06-15 10:56:03 | INFO     | server.transfer          | Storage zainicjalizowany: /Users/bartek/Desktop/SecureShare/uploads
+2026-06-15 10:56:03 | INFO     | server.main              | Watchdog uruchomiony
+2026-06-15 10:56:03 | INFO     | server.main              | Serwer nasłuchuje na 127.0.0.1:9999 (TLS)
+2026-06-15 10:56:03 | INFO     | server.main              | Aktywni użytkownicy: 0 | MAX_FILE=50MB | TIMEOUT=5s
+2026-06-15 10:56:43 | INFO     | server.main              | Nowe połączenie | id=e1f7c44c-9e0 | addr=127.0.0.1:59834
+2026-06-15 10:56:43 | DEBUG    | server.protocol          | [e1f7c44c-9e0] ← HELLO | msg_id=f904d456…
+2026-06-15 10:56:43 | INFO     | server.protocol          | [e1f7c44c-9e0] HELLO | client_version=1.0
+2026-06-15 10:56:43 | DEBUG    | server.main              | [e1f7c44c-9e0] Stan: DISCONNECTED → CONNECTED
+2026-06-15 10:56:43 | DEBUG    | server.protocol          | [e1f7c44c-9e0] ← AUTH | msg_id=e94d797b…
+2026-06-15 10:56:43 | INFO     | server.auth              | Zalogowano użytkownika 'alice' | session=qWYKGEOCznIK…
+2026-06-15 10:56:43 | DEBUG    | server.main              | [e1f7c44c-9e0] Stan: CONNECTED → AUTHENTICATED
+2026-06-15 10:56:43 | INFO     | server.protocol          | [e1f7c44c-9e0] AUTH OK | user='alice' | session=qWYKGEOCznIK…
+2026-06-15 10:56:53 | WARNING  | server.main              | [Watchdog] Timed-out: e1f7c44c-9e0 | user=alice | state=AUTHENTICATED
+2026-06-15 10:56:53 | DEBUG    | server.main              | [Watchdog] Aktywne połączenia: 1
+2026-06-15 10:57:03 | WARNING  | server.main              | [Watchdog] Timed-out: e1f7c44c-9e0 | user=alice | state=AUTHENTICATED
+2026-06-15 10:57:03 | DEBUG    | server.main              | [Watchdog] Aktywne połączenia: 1
+2026-06-15 10:57:13 | WARNING  | server.main              | [Watchdog] Timed-out: e1f7c44c-9e0 | user=alice | state=AUTHENTICATED
+2026-06-15 10:57:13 | DEBUG    | server.main              | [Watchdog] Aktywne połączenia: 1
+2026-06-15 10:57:13 | DEBUG    | server.protocol          | [e1f7c44c-9e0] ← PING | msg_id=67fed889…
+2026-06-15 10:57:23 | WARNING  | server.main              | [Watchdog] Timed-out: e1f7c44c-9e0 | user=alice | state=AUTHENTICATED
+2026-06-15 10:57:23 | DEBUG    | server.main              | [Watchdog] Aktywne połączenia: 1
+2026-06-15 10:57:33 | WARNING  | server.main              | [Watchdog] Timed-out: e1f7c44c-9e0 | user=alice | state=AUTHENTICATED
+2026-06-15 10:57:33 | DEBUG    | server.main              | [Watchdog] Aktywne połączenia: 1
+2026-06-15 10:57:43 | WARNING  | server.main              | [Watchdog] Timed-out: e1f7c44c-9e0 | user=alice | state=AUTHENTICATED
+2026-06-15 10:57:43 | DEBUG    | server.main              | [Watchdog] Aktywne połączenia: 1
+2026-06-15 10:57:43 | DEBUG    | server.protocol          | [e1f7c44c-9e0] ← PING | msg_id=a662df53…
+2026-06-15 10:57:53 | WARNING  | server.main              | [Watchdog] Timed-out: e1f7c44c-9e0 | user=alice | state=AUTHENTICATED
+2026-06-15 10:57:53 | DEBUG    | server.main              | [Watchdog] Aktywne połączenia: 1
+2026-06-15 10:58:03 | WARNING  | server.main              | [Watchdog] Timed-out: e1f7c44c-9e0 | user=alice | state=AUTHENTICATED
+2026-06-15 10:58:03 | DEBUG    | server.main              | [Watchdog] Aktywne połączenia: 1
+2026-06-15 10:58:13 | WARNING  | server.main              | [Watchdog] Timed-out: e1f7c44c-9e0 | user=alice | state=AUTHENTICATED
+2026-06-15 10:58:13 | DEBUG    | server.main              | [Watchdog] Aktywne połączenia: 1
+2026-06-15 10:58:13 | DEBUG    | server.protocol          | [e1f7c44c-9e0] ← PING | msg_id=641a2a22…
+2026-06-15 10:58:23 | WARNING  | server.main              | [Watchdog] Timed-out: e1f7c44c-9e0 | user=alice | state=AUTHENTICATED
+2026-06-15 10:58:23 | DEBUG    | server.main              | [Watchdog] Aktywne połączenia: 1
+2026-06-15 10:58:33 | WARNING  | server.main              | [Watchdog] Timed-out: e1f7c44c-9e0 | user=alice | state=AUTHENTICATED
+2026-06-15 10:58:33 | DEBUG    | server.main              | [Watchdog] Aktywne połączenia: 1
+2026-06-15 10:58:43 | WARNING  | server.main              | [Watchdog] Timed-out: e1f7c44c-9e0 | user=alice | state=AUTHENTICATED
+2026-06-15 10:58:43 | DEBUG    | server.main              | [Watchdog] Aktywne połączenia: 1
+2026-06-15 10:58:43 | DEBUG    | server.protocol          | [e1f7c44c-9e0] ← PING | msg_id=dfb95137…
+2026-06-15 10:58:53 | WARNING  | server.main              | [Watchdog] Timed-out: e1f7c44c-9e0 | user=alice | state=AUTHENTICATED
+2026-06-15 10:58:53 | DEBUG    | server.main              | [Watchdog] Aktywne połączenia: 1
+2026-06-15 10:58:54 | DEBUG    | server.protocol          | [e1f7c44c-9e0] ← UPLOAD_START | msg_id=deb215ae…
+2026-06-15 10:58:54 | INFO     | server.transfer          | Upload start | file='notatka.txt' | size=34B | user='alice'
+2026-06-15 10:58:54 | DEBUG    | server.main              | [e1f7c44c-9e0] Stan: AUTHENTICATED → TRANSFERRING
+2026-06-15 10:58:54 | DEBUG    | server.protocol          | [e1f7c44c-9e0] ← UPLOAD_CHUNK | msg_id=64f720be…
+2026-06-15 10:58:54 | DEBUG    | server.transfer          | Upload chunk | file='notatka.txt' | chunk=0 | size=34B
+2026-06-15 10:58:54 | DEBUG    | server.protocol          | [e1f7c44c-9e0] ← UPLOAD_END | msg_id=0ee6b901…
+2026-06-15 10:58:54 | INFO     | server.transfer          | Upload zakończony | file='notatka.txt' | size=34B | user='alice'
+2026-06-15 10:58:54 | DEBUG    | server.main              | [e1f7c44c-9e0] Stan: TRANSFERRING → AUTHENTICATED
+2026-06-15 10:59:03 | WARNING  | server.main              | [Watchdog] Timed-out: e1f7c44c-9e0 | user=alice | state=AUTHENTICATED
+2026-06-15 10:59:03 | DEBUG    | server.main              | [Watchdog] Aktywne połączenia: 1
+2026-06-15 10:59:13 | WARNING  | server.main              | [Watchdog] Timed-out: e1f7c44c-9e0 | user=alice | state=AUTHENTICATED
+2026-06-15 10:59:13 | DEBUG    | server.main              | [Watchdog] Aktywne połączenia: 1
+2026-06-15 10:59:13 | DEBUG    | server.protocol          | [e1f7c44c-9e0] ← DOWNLOAD_REQUEST | msg_id=58d6e917…
+2026-06-15 10:59:13 | DEBUG    | server.main              | [e1f7c44c-9e0] Stan: AUTHENTICATED → TRANSFERRING
+2026-06-15 10:59:13 | WARNING  | server.protocol          | [e1f7c44c-9e0] ERROR 100 → Plik 'nottka.txt' nie istnieje na serwerze
+2026-06-15 10:59:13 | DEBUG    | server.main              | [e1f7c44c-9e0] Stan: TRANSFERRING → AUTHENTICATED
+2026-06-15 10:59:18 | DEBUG    | server.protocol          | [e1f7c44c-9e0] ← DOWNLOAD_REQUEST | msg_id=94090c0b…
+2026-06-15 10:59:18 | DEBUG    | server.main              | [e1f7c44c-9e0] Stan: AUTHENTICATED → TRANSFERRING
+2026-06-15 10:59:18 | WARNING  | server.protocol          | [e1f7c44c-9e0] ERROR 100 → Plik 'nottka.txt' nie istnieje na serwerze
+2026-06-15 10:59:18 | DEBUG    | server.main              | [e1f7c44c-9e0] Stan: TRANSFERRING → AUTHENTICATED
+2026-06-15 10:59:23 | DEBUG    | server.main              | [Watchdog] Aktywne połączenia: 1
+2026-06-15 10:59:23 | DEBUG    | server.protocol          | [e1f7c44c-9e0] ← DOWNLOAD_REQUEST | msg_id=3f7a77e6…
+2026-06-15 10:59:23 | DEBUG    | server.main              | [e1f7c44c-9e0] Stan: AUTHENTICATED → TRANSFERRING
+2026-06-15 10:59:23 | WARNING  | server.protocol          | [e1f7c44c-9e0] ERROR 100 → Plik 'nottka.txt' nie istnieje na serwerze
+2026-06-15 10:59:23 | DEBUG    | server.main              | [e1f7c44c-9e0] Stan: TRANSFERRING → AUTHENTICATED
+2026-06-15 10:59:28 | INFO     | server.main              | [e1f7c44c-9e0] Klient rozłączył się
+2026-06-15 10:59:28 | INFO     | server.auth              | Sesja zakończona | user='alice' | session=qWYKGEOCznIK…
+2026-06-15 10:59:28 | INFO     | server.main              | Rozłączono | id=e1f7c44c-9e0 | user=alice | uptime=164.9s
+2026-06-15 11:00:03 | INFO     | server.main              | Zatrzymywanie serwera (Ctrl+C)…
+2026-06-15 11:00:03 | INFO     | server.main              | Serwer zatrzymany | obsłużono połączeń aktywnych: 0
+2026-06-15 11:15:50 | WARNING  | server.auth              | Plik users.json nie istnieje, tworzę pusty.
+2026-06-15 11:15:50 | INFO     | server.auth              | Zarejestrowano użytkownika: 'alice'
+2026-06-15 11:15:50 | INFO     | server.auth              | Zalogowano użytkownika 'alice' | session=QYNRpVJEJrHl…
+2026-06-15 11:15:50 | WARNING  | server.auth              | Plik users.json nie istnieje, tworzę pusty.
+2026-06-15 11:15:50 | WARNING  | server.auth              | Nieznany użytkownik: 'nieistnieje'
+2026-06-15 11:15:50 | WARNING  | server.auth              | Plik users.json nie istnieje, tworzę pusty.
+2026-06-15 11:15:50 | INFO     | server.auth              | Zarejestrowano użytkownika: 'bob'
+2026-06-15 11:15:50 | WARNING  | server.auth              | Błędne hasło dla użytkownika: 'bob'
+2026-06-15 11:15:50 | WARNING  | server.auth              | Plik users.json nie istnieje, tworzę pusty.
+2026-06-15 11:15:50 | INFO     | server.auth              | Zarejestrowano użytkownika: 'carol'
+2026-06-15 11:15:50 | INFO     | server.auth              | Zalogowano użytkownika 'carol' | session=VW27T3ZIc7F7…
+2026-06-15 11:15:50 | INFO     | server.auth              | Sesja zakończona | user='carol' | session=VW27T3ZIc7F7…
+2026-06-15 11:15:50 | WARNING  | server.auth              | Plik users.json nie istnieje, tworzę pusty.
+2026-06-15 11:15:50 | INFO     | server.auth              | Zarejestrowano użytkownika: 'alice'
+2026-06-15 11:15:50 | WARNING  | server.auth              | Próba rejestracji istniejącego użytkownika: 'alice'
+2026-06-15 11:15:50 | WARNING  | server.auth              | Plik users.json nie istnieje, tworzę pusty.
+2026-06-15 11:15:50 | INFO     | server.auth              | Zarejestrowano użytkownika: 'alice'
+2026-06-15 11:15:50 | WARNING  | server.auth              | Plik users.json nie istnieje, tworzę pusty.
+2026-06-15 11:15:50 | INFO     | server.auth              | Zarejestrowano użytkownika: 'dave'
+2026-06-15 11:15:50 | INFO     | server.auth              | Zalogowano użytkownika 'dave' | session=TwpIVBaoxWlB…
+2026-06-15 11:15:50 | INFO     | server.auth              | Zalogowano użytkownika 'dave' | session=qcJEUSngRxMm…
+2026-06-15 11:15:50 | WARNING  | server.auth              | Plik users.json nie istnieje, tworzę pusty.
+2026-06-15 11:15:50 | INFO     | server.auth              | Zarejestrowano użytkownika: 'alice'
+2026-06-15 11:15:50 | DEBUG    | server.protocol          | [test-conn] ← HELLO | msg_id=ce610045…
+2026-06-15 11:15:50 | INFO     | server.protocol          | [test-conn] HELLO | client_version=1.0
+2026-06-15 11:15:50 | DEBUG    | server.main              | [test-conn] Stan: DISCONNECTED → CONNECTED
+2026-06-15 11:15:50 | DEBUG    | server.protocol          | [test-conn] ← AUTH | msg_id=30f8462f…
+2026-06-15 11:15:50 | INFO     | server.auth              | Zalogowano użytkownika 'alice' | session=9y8Okyndq8Nx…
+2026-06-15 11:15:50 | DEBUG    | server.main              | [test-conn] Stan: CONNECTED → AUTHENTICATED
+2026-06-15 11:15:50 | INFO     | server.protocol          | [test-conn] AUTH OK | user='alice' | session=9y8Okyndq8Nx…
+2026-06-15 11:15:50 | DEBUG    | server.protocol          | [test-conn] ← PING | msg_id=staly-ms…
+2026-06-15 11:15:50 | DEBUG    | server.protocol          | [test-conn] ← PING | msg_id=staly-ms…
+2026-06-15 11:15:50 | WARNING  | server.protocol          | [test-conn] Duplikat wiadomości | msg_id=staly-ms…
+2026-06-15 11:15:50 | WARNING  | server.protocol          | [test-conn] ERROR 104 → Duplikat wiadomości
+2026-06-15 11:15:50 | WARNING  | server.auth              | Plik users.json nie istnieje, tworzę pusty.
+2026-06-15 11:15:50 | INFO     | server.auth              | Zarejestrowano użytkownika: 'alice'
+2026-06-15 11:15:50 | DEBUG    | server.protocol          | [test-conn] ← HELLO | msg_id=bd12381b…
+2026-06-15 11:15:50 | INFO     | server.protocol          | [test-conn] HELLO | client_version=1.0
+2026-06-15 11:15:50 | DEBUG    | server.main              | [test-conn] Stan: DISCONNECTED → CONNECTED
+2026-06-15 11:15:50 | DEBUG    | server.protocol          | [test-conn] ← AUTH | msg_id=5c8d2ee0…
+2026-06-15 11:15:50 | INFO     | server.auth              | Zalogowano użytkownika 'alice' | session=gtr9jbcK3SIJ…
+2026-06-15 11:15:50 | DEBUG    | server.main              | [test-conn] Stan: CONNECTED → AUTHENTICATED
+2026-06-15 11:15:50 | INFO     | server.protocol          | [test-conn] AUTH OK | user='alice' | session=gtr9jbcK3SIJ…
+2026-06-15 11:15:50 | DEBUG    | server.protocol          | [test-conn] ← PING | msg_id=8e94883d…
+2026-06-15 11:15:50 | WARNING  | server.protocol          | [test-conn] Nieprawidłowy HMAC | type=PING
+2026-06-15 11:15:50 | WARNING  | server.protocol          | [test-conn] ERROR 100 → Nieprawidłowy HMAC
+2026-06-15 11:15:50 | WARNING  | server.auth              | Plik users.json nie istnieje, tworzę pusty.
+2026-06-15 11:15:50 | INFO     | server.auth              | Zarejestrowano użytkownika: 'alice'
+2026-06-15 11:15:50 | WARNING  | server.protocol          | [test-conn] Błąd parsowania JSON
+2026-06-15 11:15:50 | WARNING  | server.protocol          | [test-conn] ERROR 100 → Nieprawidłowy format JSON
+2026-06-15 11:15:50 | WARNING  | server.auth              | Plik users.json nie istnieje, tworzę pusty.
+2026-06-15 11:15:50 | INFO     | server.auth              | Zarejestrowano użytkownika: 'alice'
+2026-06-15 11:15:50 | WARNING  | server.protocol          | [test-conn] ERROR 100 → Brakujące pole wiadomości: 'msg_id'
+2026-06-15 11:15:50 | WARNING  | server.auth              | Plik users.json nie istnieje, tworzę pusty.
+2026-06-15 11:15:50 | INFO     | server.auth              | Zarejestrowano użytkownika: 'alice'
+2026-06-15 11:15:50 | DEBUG    | server.protocol          | [test-conn] ← HELLO | msg_id=168fb72c…
+2026-06-15 11:15:50 | INFO     | server.protocol          | [test-conn] HELLO | client_version=1.0
+2026-06-15 11:15:50 | DEBUG    | server.main              | [test-conn] Stan: DISCONNECTED → CONNECTED
+2026-06-15 11:15:50 | DEBUG    | server.protocol          | [test-conn] ← UPLOAD_START | msg_id=bd39424a…
+2026-06-15 11:15:50 | WARNING  | server.protocol          | [test-conn] ERROR 102 → Niedozwolona operacja w stanie CONNECTED (wymagany: AUTHENTICATED)
+2026-06-15 11:15:50 | WARNING  | server.auth              | Plik users.json nie istnieje, tworzę pusty.
+2026-06-15 11:15:50 | INFO     | server.auth              | Zarejestrowano użytkownika: 'alice'
+2026-06-15 11:15:50 | DEBUG    | server.protocol          | [test-conn] ← HELLO | msg_id=3c4a649a…
+2026-06-15 11:15:50 | INFO     | server.protocol          | [test-conn] HELLO | client_version=1.0
+2026-06-15 11:15:50 | DEBUG    | server.main              | [test-conn] Stan: DISCONNECTED → CONNECTED
+2026-06-15 11:15:50 | DEBUG    | server.protocol          | [test-conn] ← AUTH | msg_id=71a2721a…
+2026-06-15 11:15:50 | WARNING  | server.auth              | Błędne hasło dla użytkownika: 'alice'
+2026-06-15 11:15:50 | WARNING  | server.protocol          | [test-conn] AUTH nieudany | user='alice'
+2026-06-15 11:15:50 | DEBUG    | server.main              | [test-conn] Stan: CONNECTED → CLOSED
+2026-06-15 11:15:50 | WARNING  | server.auth              | Plik users.json nie istnieje, tworzę pusty.
+2026-06-15 11:15:50 | INFO     | server.auth              | Zarejestrowano użytkownika: 'alice'
+2026-06-15 11:15:50 | DEBUG    | server.protocol          | [test-conn] ← HELLO | msg_id=80a38627…
+2026-06-15 11:15:50 | INFO     | server.protocol          | [test-conn] HELLO | client_version=1.0
+2026-06-15 11:15:50 | DEBUG    | server.main              | [test-conn] Stan: DISCONNECTED → CONNECTED
+2026-06-15 11:15:50 | DEBUG    | server.protocol          | [test-conn] ← AUTH | msg_id=6bc6fbfa…
+2026-06-15 11:15:50 | INFO     | server.auth              | Zalogowano użytkownika 'alice' | session=hG9bbpGyf_o_…
+2026-06-15 11:15:50 | DEBUG    | server.main              | [test-conn] Stan: CONNECTED → AUTHENTICATED
+2026-06-15 11:15:50 | INFO     | server.protocol          | [test-conn] AUTH OK | user='alice' | session=hG9bbpGyf_o_…
+2026-06-15 11:15:50 | DEBUG    | server.protocol          | [test-conn] ← UPLOAD_START | msg_id=676cbc66…
+2026-06-15 11:15:50 | INFO     | server.transfer          | Upload start | file='plik.pdf' | size=34B | user='alice'
+2026-06-15 11:15:50 | DEBUG    | server.main              | [test-conn] Stan: AUTHENTICATED → TRANSFERRING
+2026-06-15 11:15:50 | DEBUG    | server.protocol          | [test-conn] ← UPLOAD_CHUNK | msg_id=861b090c…
+2026-06-15 11:15:50 | DEBUG    | server.transfer          | Upload chunk | file='plik.pdf' | chunk=0 | size=34B
+2026-06-15 11:15:50 | DEBUG    | server.protocol          | [test-conn] ← UPLOAD_END | msg_id=d96b4432…
+2026-06-15 11:15:50 | INFO     | server.transfer          | Upload zakończony | file='plik.pdf' | size=34B | user='alice'
+2026-06-15 11:15:50 | DEBUG    | server.main              | [test-conn] Stan: TRANSFERRING → AUTHENTICATED
+2026-06-15 11:15:50 | DEBUG    | server.protocol          | [test-conn] ← DOWNLOAD_REQUEST | msg_id=3c5b6fdb…
+2026-06-15 11:15:50 | DEBUG    | server.main              | [test-conn] Stan: AUTHENTICATED → TRANSFERRING
+2026-06-15 11:15:50 | INFO     | server.transfer          | Download przygotowany | file='plik.pdf' | chunks=1 | size=34B
+2026-06-15 11:15:50 | INFO     | server.protocol          | [test-conn] Download start | file='plik.pdf' | chunks=1
+2026-06-15 11:15:50 | DEBUG    | server.main              | [test-conn] Stan: TRANSFERRING → AUTHENTICATED
+2026-06-15 11:15:50 | INFO     | server.protocol          | [test-conn] Download zakończony | file='plik.pdf'
+2026-06-15 11:15:50 | INFO     | server.transfer          | Upload start | file='plik.txt' | size=8B | user='alice'
+2026-06-15 11:15:50 | DEBUG    | server.transfer          | Upload chunk | file='plik.txt' | chunk=0 | size=8B
+2026-06-15 11:15:50 | INFO     | server.transfer          | Upload start | file='raport.pdf' | size=8242B | user='alice'
+2026-06-15 11:15:50 | DEBUG    | server.transfer          | Upload chunk | file='raport.pdf' | chunk=0 | size=8192B
+2026-06-15 11:15:50 | DEBUG    | server.transfer          | Upload chunk | file='raport.pdf' | chunk=1 | size=50B
+2026-06-15 11:15:50 | INFO     | server.transfer          | Upload zakończony | file='raport.pdf' | size=8242B | user='alice'
+2026-06-15 11:15:50 | INFO     | server.transfer          | Download przygotowany | file='raport.pdf' | chunks=2 | size=8242B
+2026-06-15 11:16:29 | INFO     | server.transfer          | Storage zainicjalizowany: /Users/bartek/Desktop/SecureShare/uploads
+2026-06-15 11:16:29 | INFO     | server.main              | Watchdog uruchomiony
+2026-06-15 11:16:29 | INFO     | server.main              | Serwer nasłuchuje na 127.0.0.1:9999 (TLS)
+2026-06-15 11:16:29 | INFO     | server.main              | Aktywni użytkownicy: 0 | MAX_FILE=50MB | TIMEOUT=5s
+2026-06-15 11:16:31 | INFO     | server.main              | Nowe połączenie | id=13bee082-0b8 | addr=127.0.0.1:59918
+2026-06-15 11:16:31 | DEBUG    | server.protocol          | [13bee082-0b8] ← HELLO | msg_id=e0364a35…
+2026-06-15 11:16:31 | INFO     | server.protocol          | [13bee082-0b8] HELLO | client_version=1.0
+2026-06-15 11:16:31 | DEBUG    | server.main              | [13bee082-0b8] Stan: DISCONNECTED → CONNECTED
+2026-06-15 11:16:31 | DEBUG    | server.protocol          | [13bee082-0b8] ← AUTH | msg_id=590f8a3e…
+2026-06-15 11:16:31 | INFO     | server.auth              | Zalogowano użytkownika 'alice' | session=CvWOieKBjzzV…
+2026-06-15 11:16:31 | DEBUG    | server.main              | [13bee082-0b8] Stan: CONNECTED → AUTHENTICATED
+2026-06-15 11:16:31 | INFO     | server.protocol          | [13bee082-0b8] AUTH OK | user='alice' | session=CvWOieKBjzzV…
+2026-06-15 11:16:31 | DEBUG    | server.protocol          | [13bee082-0b8] ← DOWNLOAD_REQUEST | msg_id=6a28f0c1…
+2026-06-15 11:16:31 | DEBUG    | server.main              | [13bee082-0b8] Stan: AUTHENTICATED → TRANSFERRING
+2026-06-15 11:16:31 | WARNING  | server.protocol          | [13bee082-0b8] ERROR 100 → Plik 'nottka.txt' nie istnieje na serwerze
+2026-06-15 11:16:31 | DEBUG    | server.main              | [13bee082-0b8] Stan: TRANSFERRING → AUTHENTICATED
+2026-06-15 11:16:31 | DEBUG    | server.protocol          | [13bee082-0b8] ← DOWNLOAD_REQUEST | msg_id=3eb4bef3…
+2026-06-15 11:16:31 | DEBUG    | server.main              | [13bee082-0b8] Stan: AUTHENTICATED → TRANSFERRING
+2026-06-15 11:16:31 | INFO     | server.transfer          | Download przygotowany | file='notatka.txt' | chunks=1 | size=30B
+2026-06-15 11:16:31 | INFO     | server.protocol          | [13bee082-0b8] Download start | file='notatka.txt' | chunks=1
+2026-06-15 11:16:31 | DEBUG    | server.main              | [13bee082-0b8] Stan: TRANSFERRING → AUTHENTICATED
+2026-06-15 11:16:31 | INFO     | server.protocol          | [13bee082-0b8] Download zakończony | file='notatka.txt'
+2026-06-15 11:16:31 | DEBUG    | server.protocol          | [13bee082-0b8] ← ACK | msg_id=611d0967…
+2026-06-15 11:16:31 | DEBUG    | server.protocol          | [13bee082-0b8] Odebrano ACK dla msg_id=900a8d11…
+2026-06-15 11:16:31 | DEBUG    | server.protocol          | [13bee082-0b8] ← BYE | msg_id=2957b854…
+2026-06-15 11:16:31 | INFO     | server.protocol          | [13bee082-0b8] BYE | user='alice'
+2026-06-15 11:16:31 | INFO     | server.auth              | Sesja zakończona | user='alice' | session=CvWOieKBjzzV…
+2026-06-15 11:16:31 | DEBUG    | server.main              | [13bee082-0b8] Stan: AUTHENTICATED → CLOSED
+2026-06-15 11:16:31 | INFO     | server.main              | [13bee082-0b8] Stan CLOSED — zamykam połączenie
+2026-06-15 11:16:31 | INFO     | server.main              | Rozłączono | id=13bee082-0b8 | user=None | uptime=0.0s
+2026-06-15 11:19:50 | WARNING  | server.auth              | Plik users.json nie istnieje, tworzę pusty.
+2026-06-15 11:19:50 | INFO     | server.auth              | Zarejestrowano użytkownika: 'alice'
+2026-06-15 11:19:50 | INFO     | server.auth              | Zalogowano użytkownika 'alice' | session=EsFZj3KWyN12…
+2026-06-15 11:19:50 | WARNING  | server.auth              | Plik users.json nie istnieje, tworzę pusty.
+2026-06-15 11:19:50 | WARNING  | server.auth              | Nieznany użytkownik: 'nieistnieje'
+2026-06-15 11:19:50 | WARNING  | server.auth              | Plik users.json nie istnieje, tworzę pusty.
+2026-06-15 11:19:50 | INFO     | server.auth              | Zarejestrowano użytkownika: 'bob'
+2026-06-15 11:19:50 | WARNING  | server.auth              | Błędne hasło dla użytkownika: 'bob'
+2026-06-15 11:19:50 | WARNING  | server.auth              | Plik users.json nie istnieje, tworzę pusty.
+2026-06-15 11:19:50 | INFO     | server.auth              | Zarejestrowano użytkownika: 'carol'
+2026-06-15 11:19:50 | INFO     | server.auth              | Zalogowano użytkownika 'carol' | session=_MlVIfn0-NKm…
+2026-06-15 11:19:50 | INFO     | server.auth              | Sesja zakończona | user='carol' | session=_MlVIfn0-NKm…
+2026-06-15 11:19:50 | WARNING  | server.auth              | Plik users.json nie istnieje, tworzę pusty.
+2026-06-15 11:19:50 | INFO     | server.auth              | Zarejestrowano użytkownika: 'alice'
+2026-06-15 11:19:50 | WARNING  | server.auth              | Próba rejestracji istniejącego użytkownika: 'alice'
+2026-06-15 11:19:50 | WARNING  | server.auth              | Plik users.json nie istnieje, tworzę pusty.
+2026-06-15 11:19:50 | INFO     | server.auth              | Zarejestrowano użytkownika: 'alice'
+2026-06-15 11:19:50 | WARNING  | server.auth              | Plik users.json nie istnieje, tworzę pusty.
+2026-06-15 11:19:50 | INFO     | server.auth              | Zarejestrowano użytkownika: 'dave'
+2026-06-15 11:19:50 | INFO     | server.auth              | Zalogowano użytkownika 'dave' | session=paERKG7zkKy7…
+2026-06-15 11:19:50 | INFO     | server.auth              | Zalogowano użytkownika 'dave' | session=R30BsHqZUe10…
+2026-06-15 11:19:50 | WARNING  | server.auth              | Plik users.json nie istnieje, tworzę pusty.
+2026-06-15 11:19:50 | INFO     | server.auth              | Zarejestrowano użytkownika: 'alice'
+2026-06-15 11:19:50 | DEBUG    | server.protocol          | [test-conn] ← HELLO | msg_id=9024f357…
+2026-06-15 11:19:50 | INFO     | server.protocol          | [test-conn] HELLO | client_version=1.0
+2026-06-15 11:19:50 | DEBUG    | server.main              | [test-conn] Stan: DISCONNECTED → CONNECTED
+2026-06-15 11:19:50 | DEBUG    | server.protocol          | [test-conn] ← AUTH | msg_id=fb5f4dfb…
+2026-06-15 11:19:50 | INFO     | server.auth              | Zalogowano użytkownika 'alice' | session=RRLpbIIrDafy…
+2026-06-15 11:19:50 | DEBUG    | server.main              | [test-conn] Stan: CONNECTED → AUTHENTICATED
+2026-06-15 11:19:50 | INFO     | server.protocol          | [test-conn] AUTH OK | user='alice' | session=RRLpbIIrDafy…
+2026-06-15 11:19:50 | DEBUG    | server.protocol          | [test-conn] ← PING | msg_id=staly-ms…
+2026-06-15 11:19:50 | DEBUG    | server.protocol          | [test-conn] ← PING | msg_id=staly-ms…
+2026-06-15 11:19:50 | WARNING  | server.protocol          | [test-conn] Duplikat wiadomości | msg_id=staly-ms…
+2026-06-15 11:19:50 | WARNING  | server.protocol          | [test-conn] ERROR 104 → Duplikat wiadomości
+2026-06-15 11:19:50 | WARNING  | server.auth              | Plik users.json nie istnieje, tworzę pusty.
+2026-06-15 11:19:50 | INFO     | server.auth              | Zarejestrowano użytkownika: 'alice'
+2026-06-15 11:19:50 | DEBUG    | server.protocol          | [test-conn] ← HELLO | msg_id=4e1191b4…
+2026-06-15 11:19:50 | INFO     | server.protocol          | [test-conn] HELLO | client_version=1.0
+2026-06-15 11:19:50 | DEBUG    | server.main              | [test-conn] Stan: DISCONNECTED → CONNECTED
+2026-06-15 11:19:50 | DEBUG    | server.protocol          | [test-conn] ← AUTH | msg_id=a6f0da04…
+2026-06-15 11:19:50 | INFO     | server.auth              | Zalogowano użytkownika 'alice' | session=PlVTZfIMBXAG…
+2026-06-15 11:19:50 | DEBUG    | server.main              | [test-conn] Stan: CONNECTED → AUTHENTICATED
+2026-06-15 11:19:50 | INFO     | server.protocol          | [test-conn] AUTH OK | user='alice' | session=PlVTZfIMBXAG…
+2026-06-15 11:19:50 | DEBUG    | server.protocol          | [test-conn] ← PING | msg_id=2a54b06c…
+2026-06-15 11:19:50 | WARNING  | server.protocol          | [test-conn] Nieprawidłowy HMAC | type=PING
+2026-06-15 11:19:50 | WARNING  | server.protocol          | [test-conn] ERROR 100 → Nieprawidłowy HMAC
+2026-06-15 11:19:50 | WARNING  | server.auth              | Plik users.json nie istnieje, tworzę pusty.
+2026-06-15 11:19:50 | INFO     | server.auth              | Zarejestrowano użytkownika: 'alice'
+2026-06-15 11:19:50 | WARNING  | server.protocol          | [test-conn] Błąd parsowania JSON
+2026-06-15 11:19:50 | WARNING  | server.protocol          | [test-conn] ERROR 100 → Nieprawidłowy format JSON
+2026-06-15 11:19:50 | WARNING  | server.auth              | Plik users.json nie istnieje, tworzę pusty.
+2026-06-15 11:19:50 | INFO     | server.auth              | Zarejestrowano użytkownika: 'alice'
+2026-06-15 11:19:50 | WARNING  | server.protocol          | [test-conn] ERROR 100 → Brakujące pole wiadomości: 'msg_id'
+2026-06-15 11:19:50 | WARNING  | server.auth              | Plik users.json nie istnieje, tworzę pusty.
+2026-06-15 11:19:50 | INFO     | server.auth              | Zarejestrowano użytkownika: 'alice'
+2026-06-15 11:19:50 | DEBUG    | server.protocol          | [test-conn] ← HELLO | msg_id=034901de…
+2026-06-15 11:19:50 | INFO     | server.protocol          | [test-conn] HELLO | client_version=1.0
+2026-06-15 11:19:50 | DEBUG    | server.main              | [test-conn] Stan: DISCONNECTED → CONNECTED
+2026-06-15 11:19:50 | DEBUG    | server.protocol          | [test-conn] ← UPLOAD_START | msg_id=ba4aeafb…
+2026-06-15 11:19:50 | WARNING  | server.protocol          | [test-conn] ERROR 102 → Niedozwolona operacja w stanie CONNECTED (wymagany: AUTHENTICATED)
+2026-06-15 11:19:50 | WARNING  | server.auth              | Plik users.json nie istnieje, tworzę pusty.
+2026-06-15 11:19:50 | INFO     | server.auth              | Zarejestrowano użytkownika: 'alice'
+2026-06-15 11:19:50 | DEBUG    | server.protocol          | [test-conn] ← HELLO | msg_id=3d3abab8…
+2026-06-15 11:19:50 | INFO     | server.protocol          | [test-conn] HELLO | client_version=1.0
+2026-06-15 11:19:50 | DEBUG    | server.main              | [test-conn] Stan: DISCONNECTED → CONNECTED
+2026-06-15 11:19:50 | DEBUG    | server.protocol          | [test-conn] ← AUTH | msg_id=443e9457…
+2026-06-15 11:19:50 | WARNING  | server.auth              | Błędne hasło dla użytkownika: 'alice'
+2026-06-15 11:19:50 | WARNING  | server.protocol          | [test-conn] AUTH nieudany | user='alice'
+2026-06-15 11:19:50 | DEBUG    | server.main              | [test-conn] Stan: CONNECTED → CLOSED
+2026-06-15 11:19:50 | WARNING  | server.auth              | Plik users.json nie istnieje, tworzę pusty.
+2026-06-15 11:19:50 | INFO     | server.auth              | Zarejestrowano użytkownika: 'alice'
+2026-06-15 11:19:50 | DEBUG    | server.protocol          | [test-conn] ← HELLO | msg_id=bee69c88…
+2026-06-15 11:19:50 | INFO     | server.protocol          | [test-conn] HELLO | client_version=1.0
+2026-06-15 11:19:50 | DEBUG    | server.main              | [test-conn] Stan: DISCONNECTED → CONNECTED
+2026-06-15 11:19:50 | DEBUG    | server.protocol          | [test-conn] ← AUTH | msg_id=4d0010b5…
+2026-06-15 11:19:50 | INFO     | server.auth              | Zalogowano użytkownika 'alice' | session=pYQitrWntYUj…
+2026-06-15 11:19:50 | DEBUG    | server.main              | [test-conn] Stan: CONNECTED → AUTHENTICATED
+2026-06-15 11:19:50 | INFO     | server.protocol          | [test-conn] AUTH OK | user='alice' | session=pYQitrWntYUj…
+2026-06-15 11:19:50 | DEBUG    | server.protocol          | [test-conn] ← UPLOAD_START | msg_id=9923c086…
+2026-06-15 11:19:50 | INFO     | server.transfer          | Upload start | file='plik.pdf' | size=34B | user='alice'
+2026-06-15 11:19:50 | DEBUG    | server.main              | [test-conn] Stan: AUTHENTICATED → TRANSFERRING
+2026-06-15 11:19:50 | DEBUG    | server.protocol          | [test-conn] ← UPLOAD_CHUNK | msg_id=68dc699d…
+2026-06-15 11:19:50 | DEBUG    | server.transfer          | Upload chunk | file='plik.pdf' | chunk=0 | size=34B
+2026-06-15 11:19:50 | DEBUG    | server.protocol          | [test-conn] ← UPLOAD_END | msg_id=6fe9f9db…
+2026-06-15 11:19:50 | INFO     | server.transfer          | Upload zakończony | file='plik.pdf' | size=34B | user='alice'
+2026-06-15 11:19:50 | DEBUG    | server.main              | [test-conn] Stan: TRANSFERRING → AUTHENTICATED
+2026-06-15 11:19:50 | DEBUG    | server.protocol          | [test-conn] ← DOWNLOAD_REQUEST | msg_id=b2e029af…
+2026-06-15 11:19:50 | DEBUG    | server.main              | [test-conn] Stan: AUTHENTICATED → TRANSFERRING
+2026-06-15 11:19:50 | INFO     | server.transfer          | Download przygotowany | file='plik.pdf' | chunks=1 | size=34B
+2026-06-15 11:19:50 | INFO     | server.protocol          | [test-conn] Download start | file='plik.pdf' | chunks=1
+2026-06-15 11:19:50 | DEBUG    | server.main              | [test-conn] Stan: TRANSFERRING → AUTHENTICATED
+2026-06-15 11:19:50 | INFO     | server.protocol          | [test-conn] Download zakończony | file='plik.pdf'
+2026-06-15 11:19:50 | WARNING  | server.auth              | Plik users.json nie istnieje, tworzę pusty.
+2026-06-15 11:19:50 | INFO     | server.auth              | Zarejestrowano użytkownika: 'alice'
+2026-06-15 11:19:50 | DEBUG    | server.protocol          | [test-conn] ← HELLO | msg_id=0559f6e8…
+2026-06-15 11:19:50 | INFO     | server.protocol          | [test-conn] HELLO | client_version=1.0
+2026-06-15 11:19:50 | DEBUG    | server.main              | [test-conn] Stan: DISCONNECTED → CONNECTED
+2026-06-15 11:19:50 | DEBUG    | server.protocol          | [test-conn] ← AUTH | msg_id=88a082ad…
+2026-06-15 11:19:50 | INFO     | server.auth              | Zalogowano użytkownika 'alice' | session=1q76HbB3Ilaz…
+2026-06-15 11:19:50 | DEBUG    | server.main              | [test-conn] Stan: CONNECTED → AUTHENTICATED
+2026-06-15 11:19:50 | INFO     | server.protocol          | [test-conn] AUTH OK | user='alice' | session=1q76HbB3Ilaz…
+2026-06-15 11:19:50 | DEBUG    | server.protocol          | [test-conn] ← LIST_REQUEST | msg_id=94cb68ba…
+2026-06-15 11:19:50 | INFO     | server.protocol          | [test-conn] LIST | user='alice' | plików=0
+2026-06-15 11:19:50 | DEBUG    | server.protocol          | [test-conn] ← UPLOAD_START | msg_id=92d71e85…
+2026-06-15 11:19:50 | INFO     | server.transfer          | Upload start | file='lista.txt' | size=13B | user='alice'
+2026-06-15 11:19:50 | DEBUG    | server.main              | [test-conn] Stan: AUTHENTICATED → TRANSFERRING
+2026-06-15 11:19:50 | DEBUG    | server.protocol          | [test-conn] ← UPLOAD_CHUNK | msg_id=d656659c…
+2026-06-15 11:19:50 | DEBUG    | server.transfer          | Upload chunk | file='lista.txt' | chunk=0 | size=13B
+2026-06-15 11:19:50 | DEBUG    | server.protocol          | [test-conn] ← UPLOAD_END | msg_id=b36a634c…
+2026-06-15 11:19:50 | INFO     | server.transfer          | Upload zakończony | file='lista.txt' | size=13B | user='alice'
+2026-06-15 11:19:50 | DEBUG    | server.main              | [test-conn] Stan: TRANSFERRING → AUTHENTICATED
+2026-06-15 11:19:50 | DEBUG    | server.protocol          | [test-conn] ← LIST_REQUEST | msg_id=11b6c4d8…
+2026-06-15 11:19:50 | INFO     | server.protocol          | [test-conn] LIST | user='alice' | plików=1
+2026-06-15 11:19:50 | WARNING  | server.auth              | Plik users.json nie istnieje, tworzę pusty.
+2026-06-15 11:19:50 | INFO     | server.auth              | Zarejestrowano użytkownika: 'alice'
+2026-06-15 11:19:50 | DEBUG    | server.protocol          | [test-conn] ← HELLO | msg_id=131b5005…
+2026-06-15 11:19:50 | INFO     | server.protocol          | [test-conn] HELLO | client_version=1.0
+2026-06-15 11:19:50 | DEBUG    | server.main              | [test-conn] Stan: DISCONNECTED → CONNECTED
+2026-06-15 11:19:50 | DEBUG    | server.protocol          | [test-conn] ← LIST_REQUEST | msg_id=9766b76b…
+2026-06-15 11:19:50 | WARNING  | server.protocol          | [test-conn] ERROR 102 → Niedozwolona operacja w stanie CONNECTED (wymagany: AUTHENTICATED)
+2026-06-15 11:19:50 | INFO     | server.transfer          | Upload start | file='plik.txt' | size=8B | user='alice'
+2026-06-15 11:19:50 | DEBUG    | server.transfer          | Upload chunk | file='plik.txt' | chunk=0 | size=8B
+2026-06-15 11:19:50 | INFO     | server.transfer          | Upload start | file='raport.pdf' | size=8242B | user='alice'
+2026-06-15 11:19:50 | DEBUG    | server.transfer          | Upload chunk | file='raport.pdf' | chunk=0 | size=8192B
+2026-06-15 11:19:50 | DEBUG    | server.transfer          | Upload chunk | file='raport.pdf' | chunk=1 | size=50B
+2026-06-15 11:19:50 | INFO     | server.transfer          | Upload zakończony | file='raport.pdf' | size=8242B | user='alice'
+2026-06-15 11:19:50 | INFO     | server.transfer          | Download przygotowany | file='raport.pdf' | chunks=2 | size=8242B
+2026-06-15 11:20:02 | INFO     | server.transfer          | Storage zainicjalizowany: /Users/bartek/Desktop/SecureShare/uploads
+2026-06-15 11:20:02 | INFO     | server.main              | Watchdog uruchomiony
+2026-06-15 11:20:02 | INFO     | server.main              | Serwer nasłuchuje na 127.0.0.1:9999 (TLS)
+2026-06-15 11:20:02 | INFO     | server.main              | Aktywni użytkownicy: 0 | MAX_FILE=50MB | TIMEOUT=5s
+2026-06-15 11:20:04 | INFO     | server.main              | Nowe połączenie | id=8a14b377-f2a | addr=127.0.0.1:59924
+2026-06-15 11:20:04 | DEBUG    | server.protocol          | [8a14b377-f2a] ← HELLO | msg_id=47d72171…
+2026-06-15 11:20:04 | INFO     | server.protocol          | [8a14b377-f2a] HELLO | client_version=1.0
+2026-06-15 11:20:04 | DEBUG    | server.main              | [8a14b377-f2a] Stan: DISCONNECTED → CONNECTED
+2026-06-15 11:20:04 | DEBUG    | server.protocol          | [8a14b377-f2a] ← AUTH | msg_id=bc3ab327…
+2026-06-15 11:20:04 | INFO     | server.auth              | Zalogowano użytkownika 'alice' | session=ewLtGonmFyvy…
+2026-06-15 11:20:04 | DEBUG    | server.main              | [8a14b377-f2a] Stan: CONNECTED → AUTHENTICATED
+2026-06-15 11:20:04 | INFO     | server.protocol          | [8a14b377-f2a] AUTH OK | user='alice' | session=ewLtGonmFyvy…
+2026-06-15 11:20:04 | DEBUG    | server.protocol          | [8a14b377-f2a] ← LIST_REQUEST | msg_id=cdd45911…
+2026-06-15 11:20:04 | INFO     | server.protocol          | [8a14b377-f2a] LIST | user='alice' | plików=3
+2026-06-15 11:20:04 | DEBUG    | server.protocol          | [8a14b377-f2a] ← BYE | msg_id=717bd021…
+2026-06-15 11:20:04 | INFO     | server.protocol          | [8a14b377-f2a] BYE | user='alice'
+2026-06-15 11:20:04 | INFO     | server.auth              | Sesja zakończona | user='alice' | session=ewLtGonmFyvy…
+2026-06-15 11:20:04 | DEBUG    | server.main              | [8a14b377-f2a] Stan: AUTHENTICATED → CLOSED
+2026-06-15 11:20:04 | INFO     | server.main              | [8a14b377-f2a] Stan CLOSED — zamykam połączenie
+2026-06-15 11:20:04 | INFO     | server.main              | Rozłączono | id=8a14b377-f2a | user=None | uptime=0.0s
+2026-06-15 11:36:02 | INFO     | server.transfer          | Storage zainicjalizowany: /Users/bartek/Desktop/SecureShare/uploads
+2026-06-15 11:36:02 | INFO     | server.main              | Watchdog uruchomiony
+2026-06-15 11:36:02 | INFO     | server.main              | Serwer nasłuchuje na 127.0.0.1:9999 (TLS)
+2026-06-15 11:36:02 | INFO     | server.main              | Aktywni użytkownicy: 0 | MAX_FILE=50MB | TIMEOUT=5s
+2026-06-15 11:36:27 | INFO     | server.main              | Nowe połączenie | id=b20a80d2-475 | addr=127.0.0.1:60002
+2026-06-15 11:36:27 | DEBUG    | server.protocol          | [b20a80d2-475] ← HELLO | msg_id=9b154ba5…
+2026-06-15 11:36:27 | INFO     | server.protocol          | [b20a80d2-475] HELLO | client_version=1.0
+2026-06-15 11:36:27 | DEBUG    | server.main              | [b20a80d2-475] Stan: DISCONNECTED → CONNECTED
+2026-06-15 11:36:27 | DEBUG    | server.protocol          | [b20a80d2-475] ← AUTH | msg_id=e8c27f20…
+2026-06-15 11:36:27 | INFO     | server.auth              | Zalogowano użytkownika 'alice' | session=SO71FpLz8w6k…
+2026-06-15 11:36:27 | DEBUG    | server.main              | [b20a80d2-475] Stan: CONNECTED → AUTHENTICATED
+2026-06-15 11:36:27 | INFO     | server.protocol          | [b20a80d2-475] AUTH OK | user='alice' | session=SO71FpLz8w6k…
+2026-06-15 11:36:32 | WARNING  | server.main              | [Watchdog] Timed-out: b20a80d2-475 | user=alice | state=AUTHENTICATED
+2026-06-15 11:36:32 | DEBUG    | server.main              | [Watchdog] Aktywne połączenia: 1
+2026-06-15 11:36:42 | WARNING  | server.main              | [Watchdog] Timed-out: b20a80d2-475 | user=alice | state=AUTHENTICATED
+2026-06-15 11:36:42 | DEBUG    | server.main              | [Watchdog] Aktywne połączenia: 1
+2026-06-15 11:36:52 | WARNING  | server.main              | [Watchdog] Timed-out: b20a80d2-475 | user=alice | state=AUTHENTICATED
+2026-06-15 11:36:52 | DEBUG    | server.main              | [Watchdog] Aktywne połączenia: 1
+2026-06-15 11:36:57 | DEBUG    | server.protocol          | [b20a80d2-475] ← PING | msg_id=a6e68387…
+2026-06-15 11:37:02 | WARNING  | server.main              | [Watchdog] Timed-out: b20a80d2-475 | user=alice | state=AUTHENTICATED
+2026-06-15 11:37:02 | DEBUG    | server.main              | [Watchdog] Aktywne połączenia: 1
+2026-06-15 11:37:12 | WARNING  | server.main              | [Watchdog] Timed-out: b20a80d2-475 | user=alice | state=AUTHENTICATED
+2026-06-15 11:37:12 | DEBUG    | server.main              | [Watchdog] Aktywne połączenia: 1
+2026-06-15 11:37:22 | WARNING  | server.main              | [Watchdog] Timed-out: b20a80d2-475 | user=alice | state=AUTHENTICATED
+2026-06-15 11:37:22 | DEBUG    | server.main              | [Watchdog] Aktywne połączenia: 1
+2026-06-15 11:37:27 | DEBUG    | server.protocol          | [b20a80d2-475] ← PING | msg_id=b1638276…
+2026-06-15 11:37:32 | WARNING  | server.main              | [Watchdog] Timed-out: b20a80d2-475 | user=alice | state=AUTHENTICATED
+2026-06-15 11:37:32 | DEBUG    | server.main              | [Watchdog] Aktywne połączenia: 1
+2026-06-15 11:37:42 | WARNING  | server.main              | [Watchdog] Timed-out: b20a80d2-475 | user=alice | state=AUTHENTICATED
+2026-06-15 11:37:42 | DEBUG    | server.main              | [Watchdog] Aktywne połączenia: 1
+2026-06-15 11:37:52 | WARNING  | server.main              | [Watchdog] Timed-out: b20a80d2-475 | user=alice | state=AUTHENTICATED
+2026-06-15 11:37:52 | DEBUG    | server.main              | [Watchdog] Aktywne połączenia: 1
+2026-06-15 11:37:57 | DEBUG    | server.protocol          | [b20a80d2-475] ← UPLOAD_START | msg_id=af3c6745…
+2026-06-15 11:37:57 | INFO     | server.transfer          | Upload start | file='przykladowy.txt' | size=17B | user='alice'
+2026-06-15 11:37:57 | DEBUG    | server.main              | [b20a80d2-475] Stan: AUTHENTICATED → TRANSFERRING
+2026-06-15 11:37:57 | DEBUG    | server.protocol          | [b20a80d2-475] ← UPLOAD_CHUNK | msg_id=1a9db1f7…
+2026-06-15 11:37:57 | DEBUG    | server.transfer          | Upload chunk | file='przykladowy.txt' | chunk=0 | size=17B
+2026-06-15 11:37:57 | DEBUG    | server.protocol          | [b20a80d2-475] ← UPLOAD_END | msg_id=68b8099c…
+2026-06-15 11:37:57 | INFO     | server.transfer          | Upload zakończony | file='przykladowy.txt' | size=17B | user='alice'
+2026-06-15 11:37:57 | DEBUG    | server.main              | [b20a80d2-475] Stan: TRANSFERRING → AUTHENTICATED
+2026-06-15 11:37:57 | DEBUG    | server.protocol          | [b20a80d2-475] ← PING | msg_id=a66ea50c…
+2026-06-15 11:38:02 | DEBUG    | server.protocol          | [b20a80d2-475] ← LIST_REQUEST | msg_id=bb9705dc…
+2026-06-15 11:38:02 | INFO     | server.protocol          | [b20a80d2-475] LIST | user='alice' | plików=4
+2026-06-15 11:38:02 | DEBUG    | server.main              | [Watchdog] Aktywne połączenia: 1
+2026-06-15 11:38:12 | WARNING  | server.main              | [Watchdog] Timed-out: b20a80d2-475 | user=alice | state=AUTHENTICATED
+2026-06-15 11:38:12 | DEBUG    | server.main              | [Watchdog] Aktywne połączenia: 1
+2026-06-15 11:38:16 | DEBUG    | server.protocol          | [b20a80d2-475] ← DOWNLOAD_REQUEST | msg_id=f7965104…
+2026-06-15 11:38:16 | DEBUG    | server.main              | [b20a80d2-475] Stan: AUTHENTICATED → TRANSFERRING
+2026-06-15 11:38:16 | INFO     | server.transfer          | Download przygotowany | file='przykladowy.txt' | chunks=1 | size=17B
+2026-06-15 11:38:16 | INFO     | server.protocol          | [b20a80d2-475] Download start | file='przykladowy.txt' | chunks=1
+2026-06-15 11:38:16 | DEBUG    | server.main              | [b20a80d2-475] Stan: TRANSFERRING → AUTHENTICATED
+2026-06-15 11:38:16 | INFO     | server.protocol          | [b20a80d2-475] Download zakończony | file='przykladowy.txt'
+2026-06-15 11:38:16 | DEBUG    | server.protocol          | [b20a80d2-475] ← ACK | msg_id=cad9f7ad…
+2026-06-15 11:38:16 | DEBUG    | server.protocol          | [b20a80d2-475] Odebrano ACK dla msg_id=99080ded…
+2026-06-15 11:38:22 | WARNING  | server.main              | [Watchdog] Timed-out: b20a80d2-475 | user=alice | state=AUTHENTICATED
+2026-06-15 11:38:22 | DEBUG    | server.main              | [Watchdog] Aktywne połączenia: 1
+2026-06-15 11:38:27 | DEBUG    | server.protocol          | [b20a80d2-475] ← PING | msg_id=45e24cb6…
+2026-06-15 11:38:33 | WARNING  | server.main              | [Watchdog] Timed-out: b20a80d2-475 | user=alice | state=AUTHENTICATED
+2026-06-15 11:38:33 | DEBUG    | server.main              | [Watchdog] Aktywne połączenia: 1
+2026-06-15 11:38:43 | WARNING  | server.main              | [Watchdog] Timed-out: b20a80d2-475 | user=alice | state=AUTHENTICATED
+2026-06-15 11:38:43 | DEBUG    | server.main              | [Watchdog] Aktywne połączenia: 1
+2026-06-15 11:38:53 | WARNING  | server.main              | [Watchdog] Timed-out: b20a80d2-475 | user=alice | state=AUTHENTICATED
+2026-06-15 11:38:53 | DEBUG    | server.main              | [Watchdog] Aktywne połączenia: 1
+2026-06-15 11:38:57 | DEBUG    | server.protocol          | [b20a80d2-475] ← PING | msg_id=f7bddd84…
+2026-06-15 11:39:03 | WARNING  | server.main              | [Watchdog] Timed-out: b20a80d2-475 | user=alice | state=AUTHENTICATED
+2026-06-15 11:39:03 | DEBUG    | server.main              | [Watchdog] Aktywne połączenia: 1
+2026-06-15 11:39:13 | WARNING  | server.main              | [Watchdog] Timed-out: b20a80d2-475 | user=alice | state=AUTHENTICATED
+2026-06-15 11:39:13 | DEBUG    | server.main              | [Watchdog] Aktywne połączenia: 1
+2026-06-15 11:39:23 | WARNING  | server.main              | [Watchdog] Timed-out: b20a80d2-475 | user=alice | state=AUTHENTICATED
+2026-06-15 11:39:23 | DEBUG    | server.main              | [Watchdog] Aktywne połączenia: 1
+2026-06-15 11:39:27 | DEBUG    | server.protocol          | [b20a80d2-475] ← PING | msg_id=97b84017…
+2026-06-15 11:39:33 | WARNING  | server.main              | [Watchdog] Timed-out: b20a80d2-475 | user=alice | state=AUTHENTICATED
+2026-06-15 11:39:33 | DEBUG    | server.main              | [Watchdog] Aktywne połączenia: 1
+2026-06-15 11:39:43 | WARNING  | server.main              | [Watchdog] Timed-out: b20a80d2-475 | user=alice | state=AUTHENTICATED
+2026-06-15 11:39:43 | DEBUG    | server.main              | [Watchdog] Aktywne połączenia: 1
+2026-06-15 11:39:53 | WARNING  | server.main              | [Watchdog] Timed-out: b20a80d2-475 | user=alice | state=AUTHENTICATED
+2026-06-15 11:39:53 | DEBUG    | server.main              | [Watchdog] Aktywne połączenia: 1
+2026-06-15 11:39:57 | DEBUG    | server.protocol          | [b20a80d2-475] ← PING | msg_id=cf2f5206…
+2026-06-15 11:40:03 | WARNING  | server.main              | [Watchdog] Timed-out: b20a80d2-475 | user=alice | state=AUTHENTICATED
+2026-06-15 11:40:03 | DEBUG    | server.main              | [Watchdog] Aktywne połączenia: 1
+2026-06-15 11:40:13 | WARNING  | server.main              | [Watchdog] Timed-out: b20a80d2-475 | user=alice | state=AUTHENTICATED
+2026-06-15 11:40:13 | DEBUG    | server.main              | [Watchdog] Aktywne połączenia: 1
+2026-06-15 11:40:23 | WARNING  | server.main              | [Watchdog] Timed-out: b20a80d2-475 | user=alice | state=AUTHENTICATED
+2026-06-15 11:40:23 | DEBUG    | server.main              | [Watchdog] Aktywne połączenia: 1
+2026-06-15 11:40:27 | DEBUG    | server.protocol          | [b20a80d2-475] ← PING | msg_id=ae9e981b…
+2026-06-15 11:40:33 | WARNING  | server.main              | [Watchdog] Timed-out: b20a80d2-475 | user=alice | state=AUTHENTICATED
+2026-06-15 11:40:33 | DEBUG    | server.main              | [Watchdog] Aktywne połączenia: 1
+2026-06-15 11:40:43 | WARNING  | server.main              | [Watchdog] Timed-out: b20a80d2-475 | user=alice | state=AUTHENTICATED
+2026-06-15 11:40:43 | DEBUG    | server.main              | [Watchdog] Aktywne połączenia: 1
+2026-06-15 11:40:53 | WARNING  | server.main              | [Watchdog] Timed-out: b20a80d2-475 | user=alice | state=AUTHENTICATED
+2026-06-15 11:40:53 | DEBUG    | server.main              | [Watchdog] Aktywne połączenia: 1
+2026-06-15 11:40:57 | DEBUG    | server.protocol          | [b20a80d2-475] ← PING | msg_id=1da3e2e9…
+2026-06-15 11:41:03 | WARNING  | server.main              | [Watchdog] Timed-out: b20a80d2-475 | user=alice | state=AUTHENTICATED
+2026-06-15 11:41:03 | DEBUG    | server.main              | [Watchdog] Aktywne połączenia: 1
+2026-06-15 11:41:13 | WARNING  | server.main              | [Watchdog] Timed-out: b20a80d2-475 | user=alice | state=AUTHENTICATED
+2026-06-15 11:41:13 | DEBUG    | server.main              | [Watchdog] Aktywne połączenia: 1
+2026-06-15 11:41:23 | WARNING  | server.main              | [Watchdog] Timed-out: b20a80d2-475 | user=alice | state=AUTHENTICATED
+2026-06-15 11:41:23 | DEBUG    | server.main              | [Watchdog] Aktywne połączenia: 1
+2026-06-15 11:41:27 | DEBUG    | server.protocol          | [b20a80d2-475] ← PING | msg_id=01ef23aa…
+2026-06-15 11:41:33 | WARNING  | server.main              | [Watchdog] Timed-out: b20a80d2-475 | user=alice | state=AUTHENTICATED
+2026-06-15 11:41:33 | DEBUG    | server.main              | [Watchdog] Aktywne połączenia: 1
+2026-06-15 11:41:43 | WARNING  | server.main              | [Watchdog] Timed-out: b20a80d2-475 | user=alice | state=AUTHENTICATED
+2026-06-15 11:41:43 | DEBUG    | server.main              | [Watchdog] Aktywne połączenia: 1
+2026-06-15 11:41:53 | WARNING  | server.main              | [Watchdog] Timed-out: b20a80d2-475 | user=alice | state=AUTHENTICATED
+2026-06-15 11:41:53 | DEBUG    | server.main              | [Watchdog] Aktywne połączenia: 1
+2026-06-15 11:41:57 | DEBUG    | server.protocol          | [b20a80d2-475] ← PING | msg_id=792001b9…
+2026-06-15 11:42:03 | WARNING  | server.main              | [Watchdog] Timed-out: b20a80d2-475 | user=alice | state=AUTHENTICATED
+2026-06-15 11:42:03 | DEBUG    | server.main              | [Watchdog] Aktywne połączenia: 1
+2026-06-15 11:42:13 | WARNING  | server.main              | [Watchdog] Timed-out: b20a80d2-475 | user=alice | state=AUTHENTICATED
+2026-06-15 11:42:13 | DEBUG    | server.main              | [Watchdog] Aktywne połączenia: 1
+2026-06-15 11:42:23 | WARNING  | server.main              | [Watchdog] Timed-out: b20a80d2-475 | user=alice | state=AUTHENTICATED
+2026-06-15 11:42:23 | DEBUG    | server.main              | [Watchdog] Aktywne połączenia: 1
+2026-06-15 11:42:27 | DEBUG    | server.protocol          | [b20a80d2-475] ← PING | msg_id=66aeb251…
+2026-06-15 11:42:33 | WARNING  | server.main              | [Watchdog] Timed-out: b20a80d2-475 | user=alice | state=AUTHENTICATED
+2026-06-15 11:42:33 | DEBUG    | server.main              | [Watchdog] Aktywne połączenia: 1
+2026-06-15 11:42:43 | WARNING  | server.main              | [Watchdog] Timed-out: b20a80d2-475 | user=alice | state=AUTHENTICATED
+2026-06-15 11:42:43 | DEBUG    | server.main              | [Watchdog] Aktywne połączenia: 1
+2026-06-15 11:42:53 | WARNING  | server.main              | [Watchdog] Timed-out: b20a80d2-475 | user=alice | state=AUTHENTICATED
+2026-06-15 11:42:53 | DEBUG    | server.main              | [Watchdog] Aktywne połączenia: 1
+2026-06-15 11:42:57 | DEBUG    | server.protocol          | [b20a80d2-475] ← PING | msg_id=7b854054…
+2026-06-15 11:43:03 | WARNING  | server.main              | [Watchdog] Timed-out: b20a80d2-475 | user=alice | state=AUTHENTICATED
+2026-06-15 11:43:03 | DEBUG    | server.main              | [Watchdog] Aktywne połączenia: 1
+2026-06-15 11:43:13 | WARNING  | server.main              | [Watchdog] Timed-out: b20a80d2-475 | user=alice | state=AUTHENTICATED
+2026-06-15 11:43:13 | DEBUG    | server.main              | [Watchdog] Aktywne połączenia: 1
+2026-06-15 11:43:23 | WARNING  | server.main              | [Watchdog] Timed-out: b20a80d2-475 | user=alice | state=AUTHENTICATED
+2026-06-15 11:43:23 | DEBUG    | server.main              | [Watchdog] Aktywne połączenia: 1
+2026-06-15 11:43:27 | DEBUG    | server.protocol          | [b20a80d2-475] ← PING | msg_id=60a5f39e…
+2026-06-15 11:43:33 | WARNING  | server.main              | [Watchdog] Timed-out: b20a80d2-475 | user=alice | state=AUTHENTICATED
+2026-06-15 11:43:33 | DEBUG    | server.main              | [Watchdog] Aktywne połączenia: 1
+2026-06-15 11:43:43 | WARNING  | server.main              | [Watchdog] Timed-out: b20a80d2-475 | user=alice | state=AUTHENTICATED
+2026-06-15 11:43:43 | DEBUG    | server.main              | [Watchdog] Aktywne połączenia: 1
+2026-06-15 11:43:53 | WARNING  | server.main              | [Watchdog] Timed-out: b20a80d2-475 | user=alice | state=AUTHENTICATED
+2026-06-15 11:43:53 | DEBUG    | server.main              | [Watchdog] Aktywne połączenia: 1
+2026-06-15 11:43:57 | DEBUG    | server.protocol          | [b20a80d2-475] ← PING | msg_id=b73ea424…
+2026-06-15 11:44:03 | WARNING  | server.main              | [Watchdog] Timed-out: b20a80d2-475 | user=alice | state=AUTHENTICATED
+2026-06-15 11:44:03 | DEBUG    | server.main              | [Watchdog] Aktywne połączenia: 1
+2026-06-15 11:44:05 | INFO     | server.transfer          | Storage zainicjalizowany: /Users/bartek/Desktop/SecureShare/uploads
+2026-06-15 11:44:05 | INFO     | server.main              | Watchdog uruchomiony
+2026-06-15 11:44:07 | INFO     | server.main              | Nowe połączenie | id=ef35e13c-8f3 | addr=127.0.0.1:60056
+2026-06-15 11:44:07 | DEBUG    | server.protocol          | [ef35e13c-8f3] ← HELLO | msg_id=644c5dc8…
+2026-06-15 11:44:07 | INFO     | server.protocol          | [ef35e13c-8f3] HELLO | client_version=1.0
+2026-06-15 11:44:07 | DEBUG    | server.main              | [ef35e13c-8f3] Stan: DISCONNECTED → CONNECTED
+2026-06-15 11:44:07 | DEBUG    | server.protocol          | [ef35e13c-8f3] ← AUTH | msg_id=e10ae13d…
+2026-06-15 11:44:07 | INFO     | server.auth              | Zalogowano użytkownika 'alice' | session=8zzH9nGptp2P…
+2026-06-15 11:44:07 | DEBUG    | server.main              | [ef35e13c-8f3] Stan: CONNECTED → AUTHENTICATED
+2026-06-15 11:44:07 | INFO     | server.protocol          | [ef35e13c-8f3] AUTH OK | user='alice' | session=8zzH9nGptp2P…
+2026-06-15 11:44:07 | DEBUG    | server.protocol          | [ef35e13c-8f3] ← DOWNLOAD_REQUEST | msg_id=f6961c58…
+2026-06-15 11:44:07 | DEBUG    | server.main              | [ef35e13c-8f3] Stan: AUTHENTICATED → TRANSFERRING
+2026-06-15 11:44:07 | INFO     | server.transfer          | Download przygotowany | file='notatka.txt' | chunks=1 | size=23B
+2026-06-15 11:44:07 | INFO     | server.protocol          | [ef35e13c-8f3] Download start | file='notatka.txt' | chunks=1
+2026-06-15 11:44:07 | DEBUG    | server.main              | [ef35e13c-8f3] Stan: TRANSFERRING → AUTHENTICATED
+2026-06-15 11:44:07 | INFO     | server.protocol          | [ef35e13c-8f3] Download zakończony | file='notatka.txt'
+2026-06-15 11:44:07 | DEBUG    | server.protocol          | [ef35e13c-8f3] ← ACK | msg_id=f8b0d968…
+2026-06-15 11:44:07 | DEBUG    | server.protocol          | [ef35e13c-8f3] Odebrano ACK dla msg_id=a7165867…
+2026-06-15 11:44:07 | DEBUG    | server.protocol          | [ef35e13c-8f3] ← DOWNLOAD_REQUEST | msg_id=95f70f04…
+2026-06-15 11:44:07 | DEBUG    | server.main              | [ef35e13c-8f3] Stan: AUTHENTICATED → TRANSFERRING
+2026-06-15 11:44:07 | INFO     | server.transfer          | Download przygotowany | file='notatka.txt' | chunks=1 | size=23B
+2026-06-15 11:44:07 | INFO     | server.protocol          | [ef35e13c-8f3] Download start | file='notatka.txt' | chunks=1
+2026-06-15 11:44:07 | DEBUG    | server.main              | [ef35e13c-8f3] Stan: TRANSFERRING → AUTHENTICATED
+2026-06-15 11:44:07 | INFO     | server.protocol          | [ef35e13c-8f3] Download zakończony | file='notatka.txt'
+2026-06-15 11:44:07 | DEBUG    | server.protocol          | [ef35e13c-8f3] ← ACK | msg_id=8db0166d…
+2026-06-15 11:44:07 | DEBUG    | server.protocol          | [ef35e13c-8f3] Odebrano ACK dla msg_id=9bb16911…
+2026-06-15 11:44:07 | DEBUG    | server.protocol          | [ef35e13c-8f3] ← BYE | msg_id=6fffa348…
+2026-06-15 11:44:07 | INFO     | server.protocol          | [ef35e13c-8f3] BYE | user='alice'
+2026-06-15 11:44:07 | INFO     | server.auth              | Sesja zakończona | user='alice' | session=8zzH9nGptp2P…
+2026-06-15 11:44:07 | DEBUG    | server.main              | [ef35e13c-8f3] Stan: AUTHENTICATED → CLOSED
+2026-06-15 11:44:07 | INFO     | server.main              | [ef35e13c-8f3] Stan CLOSED — zamykam połączenie
+2026-06-15 11:44:07 | INFO     | server.main              | Rozłączono | id=ef35e13c-8f3 | user=None | uptime=0.0s
+2026-06-15 11:44:13 | WARNING  | server.main              | [Watchdog] Timed-out: b20a80d2-475 | user=alice | state=AUTHENTICATED
+2026-06-15 11:44:13 | DEBUG    | server.main              | [Watchdog] Aktywne połączenia: 1
+2026-06-15 11:44:23 | WARNING  | server.main              | [Watchdog] Timed-out: b20a80d2-475 | user=alice | state=AUTHENTICATED
+2026-06-15 11:44:23 | DEBUG    | server.main              | [Watchdog] Aktywne połączenia: 1
+2026-06-15 11:44:27 | DEBUG    | server.protocol          | [b20a80d2-475] ← PING | msg_id=22d56033…
+2026-06-15 11:44:33 | WARNING  | server.main              | [Watchdog] Timed-out: b20a80d2-475 | user=alice | state=AUTHENTICATED
+2026-06-15 11:44:33 | DEBUG    | server.main              | [Watchdog] Aktywne połączenia: 1
+2026-06-15 11:44:43 | WARNING  | server.main              | [Watchdog] Timed-out: b20a80d2-475 | user=alice | state=AUTHENTICATED
+2026-06-15 11:44:43 | DEBUG    | server.main              | [Watchdog] Aktywne połączenia: 1
+2026-06-15 11:44:53 | WARNING  | server.main              | [Watchdog] Timed-out: b20a80d2-475 | user=alice | state=AUTHENTICATED
+2026-06-15 11:44:53 | DEBUG    | server.main              | [Watchdog] Aktywne połączenia: 1
+2026-06-15 11:44:57 | DEBUG    | server.protocol          | [b20a80d2-475] ← PING | msg_id=f6650f4a…
+2026-06-15 11:45:03 | WARNING  | server.main              | [Watchdog] Timed-out: b20a80d2-475 | user=alice | state=AUTHENTICATED
+2026-06-15 11:45:03 | DEBUG    | server.main              | [Watchdog] Aktywne połączenia: 1
+2026-06-15 11:45:13 | WARNING  | server.main              | [Watchdog] Timed-out: b20a80d2-475 | user=alice | state=AUTHENTICATED
+2026-06-15 11:45:13 | DEBUG    | server.main              | [Watchdog] Aktywne połączenia: 1
+2026-06-15 11:45:23 | WARNING  | server.main              | [Watchdog] Timed-out: b20a80d2-475 | user=alice | state=AUTHENTICATED
+2026-06-15 11:45:23 | DEBUG    | server.main              | [Watchdog] Aktywne połączenia: 1
+2026-06-15 11:45:27 | DEBUG    | server.protocol          | [b20a80d2-475] ← PING | msg_id=112358b9…
+2026-06-15 11:45:33 | WARNING  | server.main              | [Watchdog] Timed-out: b20a80d2-475 | user=alice | state=AUTHENTICATED
+2026-06-15 11:45:33 | DEBUG    | server.main              | [Watchdog] Aktywne połączenia: 1
+2026-06-15 11:45:43 | WARNING  | server.main              | [Watchdog] Timed-out: b20a80d2-475 | user=alice | state=AUTHENTICATED
+2026-06-15 11:45:43 | DEBUG    | server.main              | [Watchdog] Aktywne połączenia: 1
+2026-06-15 11:45:53 | WARNING  | server.main              | [Watchdog] Timed-out: b20a80d2-475 | user=alice | state=AUTHENTICATED
+2026-06-15 11:45:53 | DEBUG    | server.main              | [Watchdog] Aktywne połączenia: 1
+2026-06-15 11:45:57 | DEBUG    | server.protocol          | [b20a80d2-475] ← PING | msg_id=e8186aaa…
+2026-06-15 11:46:03 | WARNING  | server.main              | [Watchdog] Timed-out: b20a80d2-475 | user=alice | state=AUTHENTICATED
+2026-06-15 11:46:03 | DEBUG    | server.main              | [Watchdog] Aktywne połączenia: 1
+2026-06-15 11:46:13 | WARNING  | server.main              | [Watchdog] Timed-out: b20a80d2-475 | user=alice | state=AUTHENTICATED
+2026-06-15 11:46:13 | DEBUG    | server.main              | [Watchdog] Aktywne połączenia: 1
+2026-06-15 11:46:23 | WARNING  | server.main              | [Watchdog] Timed-out: b20a80d2-475 | user=alice | state=AUTHENTICATED
+2026-06-15 11:46:23 | DEBUG    | server.main              | [Watchdog] Aktywne połączenia: 1
+2026-06-15 11:46:27 | DEBUG    | server.protocol          | [b20a80d2-475] ← PING | msg_id=b7c99abf…
+2026-06-15 11:46:33 | WARNING  | server.main              | [Watchdog] Timed-out: b20a80d2-475 | user=alice | state=AUTHENTICATED
+2026-06-15 11:46:33 | DEBUG    | server.main              | [Watchdog] Aktywne połączenia: 1
+2026-06-15 11:46:43 | WARNING  | server.main              | [Watchdog] Timed-out: b20a80d2-475 | user=alice | state=AUTHENTICATED
+2026-06-15 11:46:43 | DEBUG    | server.main              | [Watchdog] Aktywne połączenia: 1
+2026-06-15 11:46:53 | WARNING  | server.main              | [Watchdog] Timed-out: b20a80d2-475 | user=alice | state=AUTHENTICATED
+2026-06-15 11:46:53 | DEBUG    | server.main              | [Watchdog] Aktywne połączenia: 1
+2026-06-15 11:46:57 | DEBUG    | server.protocol          | [b20a80d2-475] ← PING | msg_id=03c7ced7…
+2026-06-15 11:47:03 | WARNING  | server.main              | [Watchdog] Timed-out: b20a80d2-475 | user=alice | state=AUTHENTICATED
+2026-06-15 11:47:03 | DEBUG    | server.main              | [Watchdog] Aktywne połączenia: 1
+2026-06-15 11:47:13 | WARNING  | server.main              | [Watchdog] Timed-out: b20a80d2-475 | user=alice | state=AUTHENTICATED
+2026-06-15 11:47:13 | DEBUG    | server.main              | [Watchdog] Aktywne połączenia: 1
+2026-06-15 11:47:23 | WARNING  | server.main              | [Watchdog] Timed-out: b20a80d2-475 | user=alice | state=AUTHENTICATED
+2026-06-15 11:47:23 | DEBUG    | server.main              | [Watchdog] Aktywne połączenia: 1
+2026-06-15 11:47:27 | DEBUG    | server.protocol          | [b20a80d2-475] ← PING | msg_id=72eb7ea7…
+2026-06-15 11:47:33 | WARNING  | server.main              | [Watchdog] Timed-out: b20a80d2-475 | user=alice | state=AUTHENTICATED
+2026-06-15 11:47:33 | DEBUG    | server.main              | [Watchdog] Aktywne połączenia: 1
+2026-06-15 11:47:43 | WARNING  | server.main              | [Watchdog] Timed-out: b20a80d2-475 | user=alice | state=AUTHENTICATED
+2026-06-15 11:47:43 | DEBUG    | server.main              | [Watchdog] Aktywne połączenia: 1
+2026-06-15 11:47:53 | WARNING  | server.main              | [Watchdog] Timed-out: b20a80d2-475 | user=alice | state=AUTHENTICATED
+2026-06-15 11:47:53 | DEBUG    | server.main              | [Watchdog] Aktywne połączenia: 1
+2026-06-15 11:47:57 | DEBUG    | server.protocol          | [b20a80d2-475] ← PING | msg_id=01e3b2db…
+2026-06-15 11:48:03 | WARNING  | server.main              | [Watchdog] Timed-out: b20a80d2-475 | user=alice | state=AUTHENTICATED
+2026-06-15 11:48:03 | DEBUG    | server.main              | [Watchdog] Aktywne połączenia: 1
+2026-06-15 11:48:13 | WARNING  | server.main              | [Watchdog] Timed-out: b20a80d2-475 | user=alice | state=AUTHENTICATED
+2026-06-15 11:48:13 | DEBUG    | server.main              | [Watchdog] Aktywne połączenia: 1
+2026-06-15 11:48:23 | WARNING  | server.main              | [Watchdog] Timed-out: b20a80d2-475 | user=alice | state=AUTHENTICATED
+2026-06-15 11:48:23 | DEBUG    | server.main              | [Watchdog] Aktywne połączenia: 1
+2026-06-15 11:48:27 | DEBUG    | server.protocol          | [b20a80d2-475] ← PING | msg_id=f46f5f28…
+2026-06-15 11:48:33 | WARNING  | server.main              | [Watchdog] Timed-out: b20a80d2-475 | user=alice | state=AUTHENTICATED
+2026-06-15 11:48:33 | DEBUG    | server.main              | [Watchdog] Aktywne połączenia: 1
+2026-06-15 11:48:43 | WARNING  | server.main              | [Watchdog] Timed-out: b20a80d2-475 | user=alice | state=AUTHENTICATED
+2026-06-15 11:48:43 | DEBUG    | server.main              | [Watchdog] Aktywne połączenia: 1
+2026-06-15 11:48:53 | WARNING  | server.main              | [Watchdog] Timed-out: b20a80d2-475 | user=alice | state=AUTHENTICATED
+2026-06-15 11:48:53 | DEBUG    | server.main              | [Watchdog] Aktywne połączenia: 1
+2026-06-15 11:48:57 | DEBUG    | server.protocol          | [b20a80d2-475] ← PING | msg_id=e737346a…
+2026-06-15 11:49:03 | WARNING  | server.main              | [Watchdog] Timed-out: b20a80d2-475 | user=alice | state=AUTHENTICATED
+2026-06-15 11:49:03 | DEBUG    | server.main              | [Watchdog] Aktywne połączenia: 1
+2026-06-15 11:49:13 | WARNING  | server.main              | [Watchdog] Timed-out: b20a80d2-475 | user=alice | state=AUTHENTICATED
+2026-06-15 11:49:13 | DEBUG    | server.main              | [Watchdog] Aktywne połączenia: 1
+2026-06-15 11:49:23 | WARNING  | server.main              | [Watchdog] Timed-out: b20a80d2-475 | user=alice | state=AUTHENTICATED
+2026-06-15 11:49:23 | DEBUG    | server.main              | [Watchdog] Aktywne połączenia: 1
+2026-06-15 11:49:27 | DEBUG    | server.protocol          | [b20a80d2-475] ← PING | msg_id=44bfbf18…
+2026-06-15 11:49:33 | WARNING  | server.main              | [Watchdog] Timed-out: b20a80d2-475 | user=alice | state=AUTHENTICATED
+2026-06-15 11:49:33 | DEBUG    | server.main              | [Watchdog] Aktywne połączenia: 1
+2026-06-15 11:49:43 | WARNING  | server.main              | [Watchdog] Timed-out: b20a80d2-475 | user=alice | state=AUTHENTICATED
+2026-06-15 11:49:43 | DEBUG    | server.main              | [Watchdog] Aktywne połączenia: 1
+2026-06-15 11:49:53 | WARNING  | server.main              | [Watchdog] Timed-out: b20a80d2-475 | user=alice | state=AUTHENTICATED
+2026-06-15 11:49:53 | DEBUG    | server.main              | [Watchdog] Aktywne połączenia: 1
+2026-06-15 11:49:57 | DEBUG    | server.protocol          | [b20a80d2-475] ← PING | msg_id=6eb0d675…
+2026-06-15 11:50:03 | WARNING  | server.main              | [Watchdog] Timed-out: b20a80d2-475 | user=alice | state=AUTHENTICATED
+2026-06-15 11:50:03 | DEBUG    | server.main              | [Watchdog] Aktywne połączenia: 1
+2026-06-15 11:50:13 | WARNING  | server.main              | [Watchdog] Timed-out: b20a80d2-475 | user=alice | state=AUTHENTICATED
+2026-06-15 11:50:13 | DEBUG    | server.main              | [Watchdog] Aktywne połączenia: 1
+2026-06-15 11:50:23 | WARNING  | server.main              | [Watchdog] Timed-out: b20a80d2-475 | user=alice | state=AUTHENTICATED
+2026-06-15 11:50:23 | DEBUG    | server.main              | [Watchdog] Aktywne połączenia: 1
+2026-06-15 11:50:27 | DEBUG    | server.protocol          | [b20a80d2-475] ← PING | msg_id=20cb3a1b…
+2026-06-15 11:50:33 | WARNING  | server.main              | [Watchdog] Timed-out: b20a80d2-475 | user=alice | state=AUTHENTICATED
+2026-06-15 11:50:33 | DEBUG    | server.main              | [Watchdog] Aktywne połączenia: 1
+2026-06-15 11:50:43 | WARNING  | server.main              | [Watchdog] Timed-out: b20a80d2-475 | user=alice | state=AUTHENTICATED
+2026-06-15 11:50:43 | DEBUG    | server.main              | [Watchdog] Aktywne połączenia: 1
+2026-06-15 11:50:53 | WARNING  | server.main              | [Watchdog] Timed-out: b20a80d2-475 | user=alice | state=AUTHENTICATED
+2026-06-15 11:50:53 | DEBUG    | server.main              | [Watchdog] Aktywne połączenia: 1
+2026-06-15 11:50:57 | DEBUG    | server.protocol          | [b20a80d2-475] ← PING | msg_id=c8222335…
+2026-06-15 11:51:03 | WARNING  | server.main              | [Watchdog] Timed-out: b20a80d2-475 | user=alice | state=AUTHENTICATED
+2026-06-15 11:51:03 | DEBUG    | server.main              | [Watchdog] Aktywne połączenia: 1
+2026-06-15 11:51:13 | WARNING  | server.main              | [Watchdog] Timed-out: b20a80d2-475 | user=alice | state=AUTHENTICATED
+2026-06-15 11:51:13 | DEBUG    | server.main              | [Watchdog] Aktywne połączenia: 1
+2026-06-15 11:51:23 | WARNING  | server.main              | [Watchdog] Timed-out: b20a80d2-475 | user=alice | state=AUTHENTICATED
+2026-06-15 11:51:23 | DEBUG    | server.main              | [Watchdog] Aktywne połączenia: 1
+2026-06-15 11:51:27 | DEBUG    | server.protocol          | [b20a80d2-475] ← PING | msg_id=bc968f72…
+2026-06-15 11:51:33 | WARNING  | server.main              | [Watchdog] Timed-out: b20a80d2-475 | user=alice | state=AUTHENTICATED
+2026-06-15 11:51:33 | DEBUG    | server.main              | [Watchdog] Aktywne połączenia: 1
+2026-06-15 11:51:43 | WARNING  | server.main              | [Watchdog] Timed-out: b20a80d2-475 | user=alice | state=AUTHENTICATED
+2026-06-15 11:51:43 | DEBUG    | server.main              | [Watchdog] Aktywne połączenia: 1
+2026-06-15 11:51:53 | WARNING  | server.main              | [Watchdog] Timed-out: b20a80d2-475 | user=alice | state=AUTHENTICATED
+2026-06-15 11:51:53 | DEBUG    | server.main              | [Watchdog] Aktywne połączenia: 1
+2026-06-15 11:51:57 | DEBUG    | server.protocol          | [b20a80d2-475] ← PING | msg_id=2e7e5a8c…
+2026-06-15 11:52:03 | WARNING  | server.main              | [Watchdog] Timed-out: b20a80d2-475 | user=alice | state=AUTHENTICATED
+2026-06-15 11:52:03 | DEBUG    | server.main              | [Watchdog] Aktywne połączenia: 1
+2026-06-15 11:52:13 | WARNING  | server.main              | [Watchdog] Timed-out: b20a80d2-475 | user=alice | state=AUTHENTICATED
+2026-06-15 11:52:13 | DEBUG    | server.main              | [Watchdog] Aktywne połączenia: 1
+2026-06-15 11:52:23 | WARNING  | server.main              | [Watchdog] Timed-out: b20a80d2-475 | user=alice | state=AUTHENTICATED
+2026-06-15 11:52:23 | DEBUG    | server.main              | [Watchdog] Aktywne połączenia: 1
+2026-06-15 11:52:27 | DEBUG    | server.protocol          | [b20a80d2-475] ← PING | msg_id=6bed6dd5…
+2026-06-15 11:52:33 | WARNING  | server.main              | [Watchdog] Timed-out: b20a80d2-475 | user=alice | state=AUTHENTICATED
+2026-06-15 11:52:33 | DEBUG    | server.main              | [Watchdog] Aktywne połączenia: 1
+2026-06-15 11:52:43 | WARNING  | server.main              | [Watchdog] Timed-out: b20a80d2-475 | user=alice | state=AUTHENTICATED
+2026-06-15 11:52:43 | DEBUG    | server.main              | [Watchdog] Aktywne połączenia: 1
+2026-06-15 11:52:53 | WARNING  | server.main              | [Watchdog] Timed-out: b20a80d2-475 | user=alice | state=AUTHENTICATED
+2026-06-15 11:52:53 | DEBUG    | server.main              | [Watchdog] Aktywne połączenia: 1
+2026-06-15 11:52:57 | DEBUG    | server.protocol          | [b20a80d2-475] ← PING | msg_id=657961b4…
+2026-06-15 11:53:03 | WARNING  | server.main              | [Watchdog] Timed-out: b20a80d2-475 | user=alice | state=AUTHENTICATED
+2026-06-15 11:53:03 | DEBUG    | server.main              | [Watchdog] Aktywne połączenia: 1
+2026-06-15 11:53:13 | WARNING  | server.main              | [Watchdog] Timed-out: b20a80d2-475 | user=alice | state=AUTHENTICATED
+2026-06-15 11:53:13 | DEBUG    | server.main              | [Watchdog] Aktywne połączenia: 1
+2026-06-15 11:53:22 | DEBUG    | server.protocol          | [b20a80d2-475] ← LIST_REQUEST | msg_id=fa1e3dc6…
+2026-06-15 11:53:22 | INFO     | server.protocol          | [b20a80d2-475] LIST | user='alice' | plików=4
+2026-06-15 11:53:23 | DEBUG    | server.main              | [Watchdog] Aktywne połączenia: 1
+2026-06-15 11:53:27 | DEBUG    | server.protocol          | [b20a80d2-475] ← PING | msg_id=32a02c18…
+2026-06-15 11:53:29 | DEBUG    | server.protocol          | [b20a80d2-475] ← DOWNLOAD_REQUEST | msg_id=80dba902…
+2026-06-15 11:53:29 | DEBUG    | server.main              | [b20a80d2-475] Stan: AUTHENTICATED → TRANSFERRING
+2026-06-15 11:53:29 | WARNING  | server.protocol          | [b20a80d2-475] ERROR 100 → Niedozwolone rozszerzenie: ''
+2026-06-15 11:53:29 | DEBUG    | server.main              | [b20a80d2-475] Stan: TRANSFERRING → AUTHENTICATED
+2026-06-15 11:53:33 | DEBUG    | server.main              | [Watchdog] Aktywne połączenia: 1
+2026-06-15 11:53:43 | WARNING  | server.main              | [Watchdog] Timed-out: b20a80d2-475 | user=alice | state=AUTHENTICATED
+2026-06-15 11:53:43 | DEBUG    | server.main              | [Watchdog] Aktywne połączenia: 1
+2026-06-15 11:53:52 | DEBUG    | server.protocol          | [b20a80d2-475] ← UPLOAD_START | msg_id=52eed17d…
+2026-06-15 11:53:52 | INFO     | server.transfer          | Upload start | file='dow.txt' | size=16B | user='alice'
+2026-06-15 11:53:52 | DEBUG    | server.main              | [b20a80d2-475] Stan: AUTHENTICATED → TRANSFERRING
+2026-06-15 11:53:52 | DEBUG    | server.protocol          | [b20a80d2-475] ← UPLOAD_CHUNK | msg_id=b2d875ce…
+2026-06-15 11:53:52 | DEBUG    | server.transfer          | Upload chunk | file='dow.txt' | chunk=0 | size=16B
+2026-06-15 11:53:52 | DEBUG    | server.protocol          | [b20a80d2-475] ← UPLOAD_END | msg_id=c594720d…
+2026-06-15 11:53:52 | INFO     | server.transfer          | Upload zakończony | file='dow.txt' | size=16B | user='alice'
+2026-06-15 11:53:52 | DEBUG    | server.main              | [b20a80d2-475] Stan: TRANSFERRING → AUTHENTICATED
+2026-06-15 11:53:53 | DEBUG    | server.main              | [Watchdog] Aktywne połączenia: 1
+2026-06-15 11:53:55 | DEBUG    | server.protocol          | [b20a80d2-475] ← LIST_REQUEST | msg_id=4a97a401…
+2026-06-15 11:53:55 | INFO     | server.protocol          | [b20a80d2-475] LIST | user='alice' | plików=5
+2026-06-15 11:53:57 | DEBUG    | server.protocol          | [b20a80d2-475] ← PING | msg_id=0eadbba4…
+2026-06-15 11:53:59 | DEBUG    | server.protocol          | [b20a80d2-475] ← BYE | msg_id=63e2ec6a…
+2026-06-15 11:53:59 | INFO     | server.protocol          | [b20a80d2-475] BYE | user='alice'
+2026-06-15 11:53:59 | INFO     | server.auth              | Sesja zakończona | user='alice' | session=SO71FpLz8w6k…
+2026-06-15 11:53:59 | DEBUG    | server.main              | [b20a80d2-475] Stan: AUTHENTICATED → CLOSED
+2026-06-15 11:53:59 | INFO     | server.main              | [b20a80d2-475] Stan CLOSED — zamykam połączenie
+2026-06-15 11:53:59 | INFO     | server.main              | Rozłączono | id=b20a80d2-475 | user=None | uptime=1052.6s
+2026-06-15 11:54:00 | INFO     | server.main              | Zatrzymywanie serwera (Ctrl+C)…
+2026-06-15 11:54:00 | INFO     | server.main              | Serwer zatrzymany | obsłużono połączeń aktywnych: 0
+2026-06-15 20:09:48 | INFO     | server.transfer          | Storage zainicjalizowany: /Users/bartek/Desktop/SecureShare/uploads
+2026-06-15 20:09:48 | INFO     | server.main              | Watchdog uruchomiony
+2026-06-15 20:09:48 | INFO     | server.main              | Serwer nasłuchuje na 127.0.0.1:9999 (TLS)
+2026-06-15 20:09:48 | INFO     | server.main              | Aktywni użytkownicy: 0 | MAX_FILE=50MB | TIMEOUT=5s
+2026-06-15 20:10:08 | INFO     | server.main              | Nowe połączenie | id=9a7cc116-74d | addr=127.0.0.1:62007
+2026-06-15 20:10:08 | DEBUG    | server.protocol          | [9a7cc116-74d] ← HELLO | msg_id=68802b28…
+2026-06-15 20:10:08 | INFO     | server.protocol          | [9a7cc116-74d] HELLO | client_version=1.0
+2026-06-15 20:10:08 | DEBUG    | server.main              | [9a7cc116-74d] Stan: DISCONNECTED → CONNECTED
+2026-06-15 20:10:08 | DEBUG    | server.protocol          | [9a7cc116-74d] ← AUTH | msg_id=c8dfec11…
+2026-06-15 20:10:08 | INFO     | server.auth              | Zalogowano użytkownika 'alice' | session=APxy0seo9E6E…
+2026-06-15 20:10:08 | DEBUG    | server.main              | [9a7cc116-74d] Stan: CONNECTED → AUTHENTICATED
+2026-06-15 20:10:08 | INFO     | server.protocol          | [9a7cc116-74d] AUTH OK | user='alice' | session=APxy0seo9E6E…
+2026-06-15 20:10:08 | DEBUG    | server.main              | [Watchdog] Aktywne połączenia: 1
+2026-06-15 20:10:18 | WARNING  | server.main              | [Watchdog] Timed-out: 9a7cc116-74d | user=alice | state=AUTHENTICATED
+2026-06-15 20:10:18 | DEBUG    | server.main              | [Watchdog] Aktywne połączenia: 1
+2026-06-15 20:10:28 | DEBUG    | server.protocol          | [9a7cc116-74d] ← UPLOAD_START | msg_id=239d3306…
+2026-06-15 20:10:28 | INFO     | server.transfer          | Upload start | file='notatka.txt' | size=26B | user='alice'
+2026-06-15 20:10:28 | DEBUG    | server.main              | [9a7cc116-74d] Stan: AUTHENTICATED → TRANSFERRING
+2026-06-15 20:10:28 | DEBUG    | server.protocol          | [9a7cc116-74d] ← UPLOAD_CHUNK | msg_id=595d64ab…
+2026-06-15 20:10:28 | DEBUG    | server.transfer          | Upload chunk | file='notatka.txt' | chunk=0 | size=26B
+2026-06-15 20:10:28 | DEBUG    | server.protocol          | [9a7cc116-74d] ← UPLOAD_END | msg_id=42193869…
+2026-06-15 20:10:28 | INFO     | server.transfer          | Upload zakończony | file='notatka.txt' | size=26B | user='alice'
+2026-06-15 20:10:28 | DEBUG    | server.main              | [9a7cc116-74d] Stan: TRANSFERRING → AUTHENTICATED
+2026-06-15 20:10:28 | DEBUG    | server.main              | [Watchdog] Aktywne połączenia: 1
+2026-06-15 20:10:38 | DEBUG    | server.protocol          | [9a7cc116-74d] ← PING | msg_id=01e9579d…
+2026-06-15 20:10:38 | DEBUG    | server.main              | [Watchdog] Aktywne połączenia: 1
+2026-06-15 20:10:48 | WARNING  | server.main              | [Watchdog] Timed-out: 9a7cc116-74d | user=alice | state=AUTHENTICATED
+2026-06-15 20:10:48 | DEBUG    | server.main              | [Watchdog] Aktywne połączenia: 1
+2026-06-15 20:10:58 | WARNING  | server.main              | [Watchdog] Timed-out: 9a7cc116-74d | user=alice | state=AUTHENTICATED
+2026-06-15 20:10:58 | DEBUG    | server.main              | [Watchdog] Aktywne połączenia: 1
+2026-06-15 20:11:03 | DEBUG    | server.protocol          | [9a7cc116-74d] ← UPLOAD_START | msg_id=51bd0c47…
+2026-06-15 20:11:03 | INFO     | server.transfer          | Upload start | file='notatka.txt' | size=26B | user='alice'
+2026-06-15 20:11:03 | DEBUG    | server.main              | [9a7cc116-74d] Stan: AUTHENTICATED → TRANSFERRING
+2026-06-15 20:11:03 | DEBUG    | server.protocol          | [9a7cc116-74d] ← UPLOAD_CHUNK | msg_id=d2fd56cb…
+2026-06-15 20:11:03 | DEBUG    | server.transfer          | Upload chunk | file='notatka.txt' | chunk=0 | size=26B
+2026-06-15 20:11:03 | DEBUG    | server.protocol          | [9a7cc116-74d] ← UPLOAD_END | msg_id=1ca0e1b5…
+2026-06-15 20:11:03 | INFO     | server.transfer          | Upload zakończony | file='notatka.txt' | size=26B | user='alice'
+2026-06-15 20:11:03 | DEBUG    | server.main              | [9a7cc116-74d] Stan: TRANSFERRING → AUTHENTICATED
+2026-06-15 20:11:08 | DEBUG    | server.protocol          | [9a7cc116-74d] ← PING | msg_id=a7d331a0…
+2026-06-15 20:11:08 | DEBUG    | server.main              | [Watchdog] Aktywne połączenia: 1
+2026-06-15 20:11:18 | WARNING  | server.main              | [Watchdog] Timed-out: 9a7cc116-74d | user=alice | state=AUTHENTICATED
+2026-06-15 20:11:18 | DEBUG    | server.main              | [Watchdog] Aktywne połączenia: 1
+2026-06-15 20:11:28 | WARNING  | server.main              | [Watchdog] Timed-out: 9a7cc116-74d | user=alice | state=AUTHENTICATED
+2026-06-15 20:11:28 | DEBUG    | server.main              | [Watchdog] Aktywne połączenia: 1
+2026-06-15 20:11:32 | DEBUG    | server.protocol          | [9a7cc116-74d] ← LIST_REQUEST | msg_id=b4afcf26…
+2026-06-15 20:11:32 | INFO     | server.protocol          | [9a7cc116-74d] LIST | user='alice' | plików=2
+2026-06-15 20:11:38 | DEBUG    | server.protocol          | [9a7cc116-74d] ← PING | msg_id=db8e6e79…
+2026-06-15 20:11:38 | DEBUG    | server.main              | [Watchdog] Aktywne połączenia: 1
+2026-06-15 20:11:48 | WARNING  | server.main              | [Watchdog] Timed-out: 9a7cc116-74d | user=alice | state=AUTHENTICATED
+2026-06-15 20:11:48 | DEBUG    | server.main              | [Watchdog] Aktywne połączenia: 1
+2026-06-15 20:11:55 | DEBUG    | server.protocol          | [9a7cc116-74d] ← DOWNLOAD_REQUEST | msg_id=cd79b919…
+2026-06-15 20:11:55 | DEBUG    | server.main              | [9a7cc116-74d] Stan: AUTHENTICATED → TRANSFERRING
+2026-06-15 20:11:55 | INFO     | server.transfer          | Download przygotowany | file='notatka.txt' | chunks=1 | size=26B
+2026-06-15 20:11:55 | INFO     | server.protocol          | [9a7cc116-74d] Download start | file='notatka.txt' | chunks=1
+2026-06-15 20:11:55 | DEBUG    | server.main              | [9a7cc116-74d] Stan: TRANSFERRING → AUTHENTICATED
+2026-06-15 20:11:55 | INFO     | server.protocol          | [9a7cc116-74d] Download zakończony | file='notatka.txt'
+2026-06-15 20:11:55 | DEBUG    | server.protocol          | [9a7cc116-74d] ← ACK | msg_id=c6a0d0ba…
+2026-06-15 20:11:55 | DEBUG    | server.protocol          | [9a7cc116-74d] Odebrano ACK dla msg_id=15a58136…
+2026-06-15 20:11:58 | DEBUG    | server.main              | [Watchdog] Aktywne połączenia: 1
+2026-06-15 20:12:08 | DEBUG    | server.protocol          | [9a7cc116-74d] ← PING | msg_id=59036546…
+2026-06-15 20:12:08 | DEBUG    | server.main              | [Watchdog] Aktywne połączenia: 1
+2026-06-15 20:12:18 | WARNING  | server.main              | [Watchdog] Timed-out: 9a7cc116-74d | user=alice | state=AUTHENTICATED
+2026-06-15 20:12:18 | DEBUG    | server.main              | [Watchdog] Aktywne połączenia: 1
+2026-06-15 20:12:28 | WARNING  | server.main              | [Watchdog] Timed-out: 9a7cc116-74d | user=alice | state=AUTHENTICATED
+2026-06-15 20:12:28 | DEBUG    | server.main              | [Watchdog] Aktywne połączenia: 1
+2026-06-15 20:12:32 | INFO     | server.main              | Zatrzymywanie serwera (Ctrl+C)…
+2026-06-15 20:12:32 | INFO     | server.main              | Serwer zatrzymany | obsłużono połączeń aktywnych: 1
+2026-06-17 16:56:24 | INFO     | server.transfer          | Storage zainicjalizowany: /Users/bartek/Desktop/SecureShare/uploads
+2026-06-17 16:56:24 | INFO     | server.main              | Watchdog uruchomiony
+2026-06-17 16:56:24 | INFO     | server.main              | Serwer nasłuchuje na 127.0.0.1:9999 (TLS)
+2026-06-17 16:56:24 | INFO     | server.main              | Aktywni użytkownicy: 0 | MAX_FILE=50MB | TIMEOUT=5s
+2026-06-17 16:56:46 | INFO     | server.main              | Nowe połączenie | id=b4d3d46f-c59 | addr=127.0.0.1:49337
+2026-06-17 16:56:46 | DEBUG    | server.protocol          | [b4d3d46f-c59] ← HELLO | msg_id=3dd41e69…
+2026-06-17 16:56:46 | INFO     | server.protocol          | [b4d3d46f-c59] HELLO | client_version=1.0
+2026-06-17 16:56:46 | DEBUG    | server.main              | [b4d3d46f-c59] Stan: DISCONNECTED → CONNECTED
+2026-06-17 16:56:46 | DEBUG    | server.protocol          | [b4d3d46f-c59] ← AUTH | msg_id=e3aef65e…
+2026-06-17 16:56:46 | INFO     | server.auth              | Zalogowano użytkownika 'alice' | session=MYp5YARBiMS0…
+2026-06-17 16:56:46 | DEBUG    | server.main              | [b4d3d46f-c59] Stan: CONNECTED → AUTHENTICATED
+2026-06-17 16:56:46 | INFO     | server.protocol          | [b4d3d46f-c59] AUTH OK | user='alice' | session=MYp5YARBiMS0…
+2026-06-17 16:56:54 | DEBUG    | server.protocol          | [b4d3d46f-c59] ← BYE | msg_id=ec10c9fb…
+2026-06-17 16:56:54 | INFO     | server.protocol          | [b4d3d46f-c59] BYE | user='alice'
+2026-06-17 16:56:54 | INFO     | server.auth              | Sesja zakończona | user='alice' | session=MYp5YARBiMS0…
+2026-06-17 16:56:54 | DEBUG    | server.main              | [b4d3d46f-c59] Stan: AUTHENTICATED → CLOSED
+2026-06-17 16:56:54 | INFO     | server.main              | [b4d3d46f-c59] Stan CLOSED — zamykam połączenie
+2026-06-17 16:56:54 | INFO     | server.main              | Rozłączono | id=b4d3d46f-c59 | user=None | uptime=7.7s
+2026-06-17 16:56:55 | INFO     | server.main              | Zatrzymywanie serwera (Ctrl+C)…
+2026-06-17 16:56:55 | INFO     | server.main              | Serwer zatrzymany | obsłużono połączeń aktywnych: 0
+2026-06-17 17:01:30 | INFO     | server.transfer          | Storage zainicjalizowany: /Users/bartek/Desktop/SecureShare/uploads
+2026-06-17 17:01:30 | INFO     | server.main              | Watchdog uruchomiony
+2026-06-17 17:01:30 | INFO     | server.main              | Serwer nasłuchuje na 127.0.0.1:9999 (TLS)
+2026-06-17 17:01:30 | INFO     | server.main              | Aktywni użytkownicy: 0 | MAX_FILE=50MB | TIMEOUT=5s
+2026-06-17 17:01:59 | INFO     | server.main              | Nowe połączenie | id=3dcd83fb-e68 | addr=127.0.0.1:49421
+2026-06-17 17:01:59 | DEBUG    | server.protocol          | [3dcd83fb-e68] ← HELLO | msg_id=8d96c24e…
+2026-06-17 17:01:59 | INFO     | server.protocol          | [3dcd83fb-e68] HELLO | client_version=1.0
+2026-06-17 17:01:59 | DEBUG    | server.main              | [3dcd83fb-e68] Stan: DISCONNECTED → CONNECTED
+2026-06-17 17:01:59 | DEBUG    | server.protocol          | [3dcd83fb-e68] ← AUTH | msg_id=ea8fa75d…
+2026-06-17 17:01:59 | INFO     | server.auth              | Zalogowano użytkownika 'alice' | session=LV-4QxFT4aA5…
+2026-06-17 17:01:59 | DEBUG    | server.main              | [3dcd83fb-e68] Stan: CONNECTED → AUTHENTICATED
+2026-06-17 17:01:59 | INFO     | server.protocol          | [3dcd83fb-e68] AUTH OK | user='alice' | session=LV-4QxFT4aA5…
+2026-06-17 17:02:00 | DEBUG    | server.main              | [Watchdog] Aktywne połączenia: 1
+2026-06-17 17:02:10 | WARNING  | server.main              | [Watchdog] Timed-out: 3dcd83fb-e68 | user=alice | state=AUTHENTICATED
+2026-06-17 17:02:10 | DEBUG    | server.main              | [Watchdog] Aktywne połączenia: 1
+2026-06-17 17:02:20 | WARNING  | server.main              | [Watchdog] Timed-out: 3dcd83fb-e68 | user=alice | state=AUTHENTICATED
+2026-06-17 17:02:20 | DEBUG    | server.main              | [Watchdog] Aktywne połączenia: 1
+2026-06-17 17:02:29 | DEBUG    | server.protocol          | [3dcd83fb-e68] ← PING | msg_id=e9c1a290…
+2026-06-17 17:02:30 | DEBUG    | server.main              | [Watchdog] Aktywne połączenia: 1
+2026-06-17 17:02:40 | WARNING  | server.main              | [Watchdog] Timed-out: 3dcd83fb-e68 | user=alice | state=AUTHENTICATED
+2026-06-17 17:02:40 | DEBUG    | server.main              | [Watchdog] Aktywne połączenia: 1
+2026-06-17 17:02:50 | WARNING  | server.main              | [Watchdog] Timed-out: 3dcd83fb-e68 | user=alice | state=AUTHENTICATED
+2026-06-17 17:02:50 | DEBUG    | server.main              | [Watchdog] Aktywne połączenia: 1
+2026-06-17 17:02:59 | DEBUG    | server.protocol          | [3dcd83fb-e68] ← PING | msg_id=cc74706d…
+2026-06-17 17:03:00 | DEBUG    | server.main              | [Watchdog] Aktywne połączenia: 1
+2026-06-17 17:03:10 | WARNING  | server.main              | [Watchdog] Timed-out: 3dcd83fb-e68 | user=alice | state=AUTHENTICATED
+2026-06-17 17:03:10 | DEBUG    | server.main              | [Watchdog] Aktywne połączenia: 1
+2026-06-17 17:03:18 | DEBUG    | server.protocol          | [3dcd83fb-e68] ← UPLOAD_START | msg_id=9bc2209f…
+2026-06-17 17:03:18 | INFO     | server.transfer          | Upload start | file='notatka.txt' | size=20B | user='alice'
+2026-06-17 17:03:18 | DEBUG    | server.main              | [3dcd83fb-e68] Stan: AUTHENTICATED → TRANSFERRING
+2026-06-17 17:03:18 | DEBUG    | server.protocol          | [3dcd83fb-e68] ← UPLOAD_CHUNK | msg_id=f043d3e2…
+2026-06-17 17:03:18 | DEBUG    | server.transfer          | Upload chunk | file='notatka.txt' | chunk=0 | size=20B
+2026-06-17 17:03:18 | DEBUG    | server.protocol          | [3dcd83fb-e68] ← UPLOAD_END | msg_id=8d7f4c01…
+2026-06-17 17:03:18 | INFO     | server.transfer          | Upload zakończony | file='notatka.txt' | size=20B | user='alice'
+2026-06-17 17:03:18 | DEBUG    | server.main              | [3dcd83fb-e68] Stan: TRANSFERRING → AUTHENTICATED
+2026-06-17 17:03:20 | DEBUG    | server.main              | [Watchdog] Aktywne połączenia: 1
+2026-06-17 17:03:29 | DEBUG    | server.protocol          | [3dcd83fb-e68] ← PING | msg_id=bf321938…
+2026-06-17 17:03:30 | DEBUG    | server.main              | [Watchdog] Aktywne połączenia: 1
+2026-06-17 17:03:40 | WARNING  | server.main              | [Watchdog] Timed-out: 3dcd83fb-e68 | user=alice | state=AUTHENTICATED
+2026-06-17 17:03:40 | DEBUG    | server.main              | [Watchdog] Aktywne połączenia: 1
+2026-06-17 17:03:50 | WARNING  | server.main              | [Watchdog] Timed-out: 3dcd83fb-e68 | user=alice | state=AUTHENTICATED
+2026-06-17 17:03:50 | DEBUG    | server.main              | [Watchdog] Aktywne połączenia: 1
+2026-06-17 17:03:59 | DEBUG    | server.protocol          | [3dcd83fb-e68] ← PING | msg_id=622c3834…
+2026-06-17 17:04:00 | DEBUG    | server.main              | [Watchdog] Aktywne połączenia: 1
+2026-06-17 17:04:10 | WARNING  | server.main              | [Watchdog] Timed-out: 3dcd83fb-e68 | user=alice | state=AUTHENTICATED
+2026-06-17 17:04:10 | DEBUG    | server.main              | [Watchdog] Aktywne połączenia: 1
+2026-06-17 17:04:20 | WARNING  | server.main              | [Watchdog] Timed-out: 3dcd83fb-e68 | user=alice | state=AUTHENTICATED
+2026-06-17 17:04:20 | DEBUG    | server.main              | [Watchdog] Aktywne połączenia: 1
+2026-06-17 17:04:29 | DEBUG    | server.protocol          | [3dcd83fb-e68] ← PING | msg_id=42fa87b8…
+2026-06-17 17:04:30 | DEBUG    | server.main              | [Watchdog] Aktywne połączenia: 1
+2026-06-17 17:04:35 | DEBUG    | server.protocol          | [3dcd83fb-e68] ← LIST_REQUEST | msg_id=254bb125…
+2026-06-17 17:04:35 | INFO     | server.protocol          | [3dcd83fb-e68] LIST | user='alice' | plików=3
+2026-06-17 17:04:40 | WARNING  | server.main              | [Watchdog] Timed-out: 3dcd83fb-e68 | user=alice | state=AUTHENTICATED
+2026-06-17 17:04:40 | DEBUG    | server.main              | [Watchdog] Aktywne połączenia: 1
+2026-06-17 17:04:50 | WARNING  | server.main              | [Watchdog] Timed-out: 3dcd83fb-e68 | user=alice | state=AUTHENTICATED
+2026-06-17 17:04:50 | DEBUG    | server.main              | [Watchdog] Aktywne połączenia: 1
+2026-06-17 17:04:59 | DEBUG    | server.protocol          | [3dcd83fb-e68] ← PING | msg_id=03319c71…
+2026-06-17 17:05:00 | DEBUG    | server.main              | [Watchdog] Aktywne połączenia: 1
+2026-06-17 17:05:06 | DEBUG    | server.protocol          | [3dcd83fb-e68] ← DOWNLOAD_REQUEST | msg_id=25319106…
+2026-06-17 17:05:06 | DEBUG    | server.main              | [3dcd83fb-e68] Stan: AUTHENTICATED → TRANSFERRING
+2026-06-17 17:05:06 | INFO     | server.transfer          | Download przygotowany | file='przyklad.txt' | chunks=1 | size=9B
+2026-06-17 17:05:06 | INFO     | server.protocol          | [3dcd83fb-e68] Download start | file='przyklad.txt' | chunks=1
+2026-06-17 17:05:06 | DEBUG    | server.main              | [3dcd83fb-e68] Stan: TRANSFERRING → AUTHENTICATED
+2026-06-17 17:05:06 | INFO     | server.protocol          | [3dcd83fb-e68] Download zakończony | file='przyklad.txt'
+2026-06-17 17:05:06 | DEBUG    | server.protocol          | [3dcd83fb-e68] ← ACK | msg_id=0becdd83…
+2026-06-17 17:05:06 | DEBUG    | server.protocol          | [3dcd83fb-e68] Odebrano ACK dla msg_id=3eb0cdd4…
+2026-06-17 17:05:10 | DEBUG    | server.main              | [Watchdog] Aktywne połączenia: 1
+2026-06-17 17:05:20 | WARNING  | server.main              | [Watchdog] Timed-out: 3dcd83fb-e68 | user=alice | state=AUTHENTICATED
+2026-06-17 17:05:20 | DEBUG    | server.main              | [Watchdog] Aktywne połączenia: 1
+2026-06-17 17:05:29 | DEBUG    | server.protocol          | [3dcd83fb-e68] ← PING | msg_id=ee3ac4d9…
+2026-06-17 17:05:30 | DEBUG    | server.main              | [Watchdog] Aktywne połączenia: 1
+2026-06-17 17:05:40 | WARNING  | server.main              | [Watchdog] Timed-out: 3dcd83fb-e68 | user=alice | state=AUTHENTICATED
+2026-06-17 17:05:40 | DEBUG    | server.main              | [Watchdog] Aktywne połączenia: 1
+2026-06-17 17:05:50 | WARNING  | server.main              | [Watchdog] Timed-out: 3dcd83fb-e68 | user=alice | state=AUTHENTICATED
+2026-06-17 17:05:50 | DEBUG    | server.main              | [Watchdog] Aktywne połączenia: 1
+2026-06-17 17:05:59 | DEBUG    | server.protocol          | [3dcd83fb-e68] ← PING | msg_id=9642bd77…
+2026-06-17 17:06:00 | DEBUG    | server.main              | [Watchdog] Aktywne połączenia: 1
+2026-06-17 17:06:10 | WARNING  | server.main              | [Watchdog] Timed-out: 3dcd83fb-e68 | user=alice | state=AUTHENTICATED
+2026-06-17 17:06:10 | DEBUG    | server.main              | [Watchdog] Aktywne połączenia: 1
+2026-06-17 17:06:20 | WARNING  | server.main              | [Watchdog] Timed-out: 3dcd83fb-e68 | user=alice | state=AUTHENTICATED
+2026-06-17 17:06:20 | DEBUG    | server.main              | [Watchdog] Aktywne połączenia: 1
+2026-06-17 17:06:29 | DEBUG    | server.protocol          | [3dcd83fb-e68] ← PING | msg_id=69eb5400…
+2026-06-17 17:06:30 | DEBUG    | server.main              | [Watchdog] Aktywne połączenia: 1
+2026-06-17 17:06:40 | WARNING  | server.main              | [Watchdog] Timed-out: 3dcd83fb-e68 | user=alice | state=AUTHENTICATED
+2026-06-17 17:06:40 | DEBUG    | server.main              | [Watchdog] Aktywne połączenia: 1
+2026-06-17 17:06:50 | WARNING  | server.main              | [Watchdog] Timed-out: 3dcd83fb-e68 | user=alice | state=AUTHENTICATED
+2026-06-17 17:06:50 | DEBUG    | server.main              | [Watchdog] Aktywne połączenia: 1
+2026-06-17 17:06:59 | DEBUG    | server.protocol          | [3dcd83fb-e68] ← PING | msg_id=2d65dbca…
+2026-06-17 17:07:00 | DEBUG    | server.main              | [Watchdog] Aktywne połączenia: 1
+2026-06-17 17:07:11 | WARNING  | server.main              | [Watchdog] Timed-out: 3dcd83fb-e68 | user=alice | state=AUTHENTICATED
+2026-06-17 17:07:11 | DEBUG    | server.main              | [Watchdog] Aktywne połączenia: 1
+2026-06-17 17:07:21 | WARNING  | server.main              | [Watchdog] Timed-out: 3dcd83fb-e68 | user=alice | state=AUTHENTICATED
+2026-06-17 17:07:21 | DEBUG    | server.main              | [Watchdog] Aktywne połączenia: 1
+2026-06-17 17:07:29 | DEBUG    | server.protocol          | [3dcd83fb-e68] ← PING | msg_id=c17e4270…
+2026-06-17 17:07:31 | DEBUG    | server.main              | [Watchdog] Aktywne połączenia: 1
+2026-06-17 17:07:41 | WARNING  | server.main              | [Watchdog] Timed-out: 3dcd83fb-e68 | user=alice | state=AUTHENTICATED
+2026-06-17 17:07:41 | DEBUG    | server.main              | [Watchdog] Aktywne połączenia: 1
+2026-06-17 17:07:51 | WARNING  | server.main              | [Watchdog] Timed-out: 3dcd83fb-e68 | user=alice | state=AUTHENTICATED
+2026-06-17 17:07:51 | DEBUG    | server.main              | [Watchdog] Aktywne połączenia: 1
+2026-06-17 17:07:59 | DEBUG    | server.protocol          | [3dcd83fb-e68] ← PING | msg_id=fcf35b7b…
+2026-06-17 17:08:01 | DEBUG    | server.main              | [Watchdog] Aktywne połączenia: 1
+2026-06-17 17:08:11 | WARNING  | server.main              | [Watchdog] Timed-out: 3dcd83fb-e68 | user=alice | state=AUTHENTICATED
+2026-06-17 17:08:11 | DEBUG    | server.main              | [Watchdog] Aktywne połączenia: 1
+2026-06-17 17:08:21 | WARNING  | server.main              | [Watchdog] Timed-out: 3dcd83fb-e68 | user=alice | state=AUTHENTICATED
+2026-06-17 17:08:21 | DEBUG    | server.main              | [Watchdog] Aktywne połączenia: 1
+2026-06-17 17:08:29 | DEBUG    | server.protocol          | [3dcd83fb-e68] ← PING | msg_id=65d690ea…
+2026-06-17 17:08:31 | DEBUG    | server.main              | [Watchdog] Aktywne połączenia: 1
+2026-06-17 17:08:31 | INFO     | server.main              | [3dcd83fb-e68] Klient rozłączył się
+2026-06-17 17:08:31 | INFO     | server.auth              | Sesja zakończona | user='alice' | session=LV-4QxFT4aA5…
+2026-06-17 17:08:31 | INFO     | server.main              | Rozłączono | id=3dcd83fb-e68 | user=alice | uptime=391.9s

@@ -96,7 +96,20 @@ def run_interactive_cli(host: str, port: int) -> None:
                     print("Błąd wysyłania pliku.")
 
             elif choice == "2":
-                filename = input("Podaj nazwę pliku na serwerze: ").strip()
+                # Najpierw pokaż, co jest dostępne na serwerze.
+                files = client.list_server_files()
+                if files is None:
+                    print("Nie udało się pobrać listy plików z serwera.")
+                    continue
+                if not files:
+                    print("Na serwerze nie ma jeszcze żadnych plików.")
+                    continue
+
+                print("\nPliki dostępne na serwerze:")
+                for f in files:
+                    print(f"  - {f['filename']} ({f['size']} B)")
+
+                filename = input("\nPodaj nazwę pliku na serwerze: ").strip()
                 if not filename:
                     print("Nazwa pliku nie może być pusta.")
                     continue
